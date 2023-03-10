@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Xunit;
+using Xunit.Sdk;
 
 namespace PERM.Models
 {
@@ -44,9 +46,8 @@ namespace PERM.Models
         [DisplayName("Joining Date ")]
         public DateTime JoiningDate { get; set; }
 
-        [Required]
+        
         [DisplayName("CNIC")]
-        [Range(13, 15, ErrorMessage = "Value for CNIC must be between 13 and 15.")]
         public string EmployeeCNIC { get; set; }
 
         [Required]

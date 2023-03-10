@@ -9,11 +9,11 @@ using PERM.Data;
 
 #nullable disable
 
-namespace PERM.Data.Migrations
+namespace PERM.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230310011149_fields-validatin01")]
-    partial class fieldsvalidatin01
+    [Migration("20230310080858_initialCreate")]
+    partial class initialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
