@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PERM</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PERM.styles.css" asp-append-version="true" />
+    <link href="~/css/permstylesheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+           <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PERM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        @if(User.Identity.IsAuthenticated){
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="EmployeeMasterDatas" asp-action="Index">EmployeeMasterData</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Departments" asp-action="Index">Department</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Attendances" asp-action="Index">Attendance</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="_Tasks" asp-action="Index">Task</a>
+                        </li>
+                        
+                        }
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+                
+            </div>
+           
+        </nav>
+            @*
+                side bar UI
+            ---------------------------------------------------  
+            <html>
+            <head>
+
+            </head>
+            <body>
+                <div class="area"></div>
+                <nav class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-home fa-2x"></i>
+                                <span class="nav-text">
+                                    Dashboard
+                                </span>
+                            </a>
+
+                        </li>
+                        <li class="has-subnav">
+                            <a href="#">
+                                <i class="fa fa-globe fa-2x"></i>
+                                <span class="nav-text">
+                                    Employee Master Data
+                                </span>
+                            </a>
+
+                        </li>
+                        <li class="has-subnav">
+                            <a href="#">
+                                <i class="fa fa-comments fa-2x"></i>
+                                <span class="nav-text">
+                                    Attendance
+                                </span>
+                            </a>
+
+                        </li>
+                        <li class="has-subnav">
+                            <a href="#">
+                                <i class="fa fa-camera-retro fa-2x"></i>
+                                <span class="nav-text">
+                                    Tasks
+                                </span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-film fa-2x"></i>
+                                <span class="nav-text">
+                                    Department
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book fa-2x"></i>
+                                <span class="nav-text">
+                                    Surveying Jobs
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-cogs fa-2x"></i>
+                                <span class="nav-text">
+                                    Tools & Resources
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-map-marker fa-2x"></i>
+                                <span class="nav-text">
+                                    Member Map
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-info fa-2x"></i>
+                                <span class="nav-text">
+                                    Documentation
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="logout">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-power-off fa-2x"></i>
+
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                            </form>
+                        </li>
+                            }
+                            else
+                            {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                        </li>
+                            }
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </body>
+        </html>
+
+        --------------------------------------------------------------------------------------------*@
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - PERM - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
