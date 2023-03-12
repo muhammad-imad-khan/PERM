@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Common\Perm.Common.APIModel\Perm.Common.APIModel.csproj" />
+	  <ProjectReference Include="..\..\Common\Perm.Common\Perm.Common.csproj" />
+	  <ProjectReference Include="..\Perm.Core.ComponentFactoryManager\Perm.Core.ComponentFactoryManager.csproj" />
+	  <ProjectReference Include="..\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
+	  <ProjectReference Include="..\Perm.Core.RequestManager.Processor\Perm.Core.RequestManager.Processor.csproj" />
+	</ItemGroup>
+
+</Project>

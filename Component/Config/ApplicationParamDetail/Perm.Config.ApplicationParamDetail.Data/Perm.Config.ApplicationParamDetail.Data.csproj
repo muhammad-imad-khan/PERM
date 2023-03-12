@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\DataAccessLayer\Perm.DataAccessLayer.DataRepository.Core\Perm.DataAccessLayer.DataRepository.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\..\Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
+		<ProjectReference Include="..\..\..\..\Model\Perm.Admin.Model\Perm.Admin.Model.csproj" />
+		<ProjectReference Include="..\..\..\..\Security\Perm.Security.AuthenticationManager\Perm.Security.AuthenticationManager.csproj" />
+		<ProjectReference Include="..\..\..\Config\ApplicationParamDetail\Perm.Config.ApplicationParamDetail.Data\Perm.Config.ApplicationParamDetail.Data.csproj" />
+		<ProjectReference Include="..\..\Role\Perm.Admin.Role.Data\Perm.Admin.Role.Data.csproj" />
+		<ProjectReference Include="..\Perm.Admin.User.Data\Perm.Admin.User.Data.csproj" />
+	</ItemGroup>
+
+</Project>

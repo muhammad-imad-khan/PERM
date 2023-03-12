@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+    <style>
+
+        td.grouptd {
+            background-color: black;
+            padding: 15px !important;
+        }
+    </style>
+    <title></title>
+</head>
+<body style="padding: 35px; background-color:black; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif; ">
+
+    <h1 style="color: white; padding-bottom: 15px;">Entity-Table Mapping:</h1>
+    <div>
+        <table style="text-align: left;" class="table table-dark table-hover" id="entityTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Table</th>
+                    <th>Entity Namespace</th>
+                    <th>Entity Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @entityTableBody
+            </tbody>
+        </table>
+    </div>
+
+    <h1 style="color: white; padding-bottom: 15px;">Registered Service:</h1>
+    <div>
+        <table style="text-align: left;" class="table table-dark table-hover" id="serviceTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Service Path</th>
+                    <th>Library</th>
+                    <th>Version</th>
+                </tr>
+            </thead>
+            <tbody>
+                @tableBody
+            </tbody>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+    <script>
+    $(document).ready(function () {
+        var groupColumn = 2;
+        $('#serviceTable').DataTable({
+            "paging":   false,
+            "info": false,
+            "searching": false,
+            "order": [[3, "desc"]],
+            "columnDefs": [
+                { "visible": false, "targets": groupColumn }
+            ],
+            "displayLength": 25,
+            "drawCallback": function ( settings ) {
+                var api = this.api();
+                var rows = api.rows( {page:'current'} ).nodes();
+                var last=null;
+
+                api.column(groupColumn, {page:'current'} ).data().each( function ( group, i ) {
+                    if ( last !== group ) {
+                        $(rows).eq( i ).before(
+                            '<tr class="group"><td colspan="5" class="grouptd">'+group+'</td></tr>'
+                        );
+
+                        last = group;
+                    }
+                } );
+            }
+        });
+
+
+        // Order by the grouping
+        $('#serviceTable tbody').on( 'click', 'tr.group', function () {
+            var currentOrder = table.order()[0];
+            if ( currentOrder[0] === groupColumn && currentOrder[1] === 'asc' ) {
+                table.order( [ groupColumn, 'desc' ] ).draw();
+            }
+            else {
+                table.order( [ groupColumn, 'asc' ] ).draw();
+            }
+        } );
+
+    });
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,18 @@
+{
+  "TenantConfig": [
+    {
+      "TenantName": "Microsoft",
+      "TenantID": "Microsoft",
+      "TenantDataBaseConfig": {
+        "ServerName": "DESKTOP-2DAGG2M\\SQLEXPRESS",
+        "DatabaseName": "PERM",
+        "UserName": "sa",
+        "Password": "sa123"
+      },
+      "TenantTheme": {
+        "LogoImageLocation": "/AppData/Logo/Microsoft.png",
+        "ColorCode": "#84E34A"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="EFCoreSecondLevelCacheInterceptor" Version="3.8.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Core\Perm.Core.ExceptionManager\Perm.Core.ExceptionManager.csproj" />
+	  <ProjectReference Include="..\..\Core\Perm.Core.TenantManager.Abstraction\Perm.Core.TenantManager.Abstraction.csproj" />
+	  <ProjectReference Include="..\..\Model\Perm.Model.Abstraction\Perm.Model.Abstraction.csproj" />
+	  <ProjectReference Include="..\Perm.DataAccessLayer.Database.SqlServer\Perm.DataAccessLayer.Database.SqlServer.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Perm.Model.Abstraction\Perm.Model.Abstraction.csproj" />
+		<ProjectReference Include="..\Perm.Model.Config\Perm.Model.Config.csproj" />
+	</ItemGroup>
+
+</Project>

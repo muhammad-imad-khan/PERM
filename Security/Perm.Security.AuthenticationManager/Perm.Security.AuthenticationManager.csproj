@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Primitives" Version="7.0.0" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.25.1" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Common\Perm.Common\Perm.Common.csproj" />
+		<ProjectReference Include="..\..\Core\Perm.Core.CacheManager\Perm.Core.CacheManager.csproj" />
+		<ProjectReference Include="..\..\Core\Perm.Core.ExceptionManager\Perm.Core.ExceptionManager.csproj" />
+		<ProjectReference Include="..\..\Core\Perm.Core.TenantManager.Abstraction\Perm.Core.TenantManager.Abstraction.csproj" />
+		<ProjectReference Include="..\..\DataAccessLayer\Perm.DataAccessLayer.Database.SqlServer\Perm.DataAccessLayer.Database.SqlServer.csproj" />
+		<ProjectReference Include="..\Perm.Security.SecurityKeys\Perm.Security.SecurityKeys.csproj" />
+	</ItemGroup>
+
+</Project>

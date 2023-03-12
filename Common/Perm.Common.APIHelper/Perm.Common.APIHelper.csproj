@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+	  <PackageReference Include="System.ComponentModel.Composition" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Core\Perm.Core.CacheManager\Perm.Core.CacheManager.csproj" />
+	  <ProjectReference Include="..\..\Core\Perm.Core.ComponentFactoryManager\Perm.Core.ComponentFactoryManager.csproj" />
+	  <ProjectReference Include="..\..\Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
+	  <ProjectReference Include="..\..\Core\Perm.Core.RequestManager.Processor\Perm.Core.RequestManager.Processor.csproj" />
+	  <ProjectReference Include="..\..\Core\Perm.Core.RequestManager\Perm.Core.RequestManager.csproj" />
+	  <ProjectReference Include="..\..\Core\Perm.Core.TenantManager\Perm.Core.TenantManager.csproj" />
+	  <ProjectReference Include="..\..\Security\Perm.Security.AuthenticationManager\Perm.Security.AuthenticationManager.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\..\Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
+		<ProjectReference Include="..\..\..\..\Core\Perm.Core.TenantManager.Abstraction\Perm.Core.TenantManager.Abstraction.csproj" />
+		<ProjectReference Include="..\..\..\..\DataAccessLayer\Perm.DataAccessLayer.Database.SqlServer\Perm.DataAccessLayer.Database.SqlServer.csproj" />
+		<ProjectReference Include="..\..\..\..\Model\Perm.Model.Setup\Perm.Model.Setup.csproj" />
+		<ProjectReference Include="..\..\..\..\Security\Perm.Security.AuthenticationManager\Perm.Security.AuthenticationManager.csproj" />
+		<ProjectReference Include="..\..\..\Config\ApplicationParamDetail\Perm.Config.ApplicationParamDetail.Data\Perm.Config.ApplicationParamDetail.Data.csproj" />
+		<ProjectReference Include="..\..\User\Perm.Admin.User.Data\Perm.Admin.User.Data.csproj" />
+	</ItemGroup>
+
+</Project>
