@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using Perm.Core.ExceptionManager;
 
-namespace Perm.Core.RequestManager.Processor.TCubeException
+namespace Perm.Core.RequestManager.Processor.PermException
 {
     public class PermDuplicateRecordException : PermDatabaseException
     {

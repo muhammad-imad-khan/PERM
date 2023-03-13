@@ -4,7 +4,7 @@ using Perm.Admin.User.Data.Repository;
 using Perm.Common.APIModel;
 using Perm.Core.ExceptionManager;
 using Perm.Core.RequestManager.Processor;
-using Perm.Core.RequestManager.Processor.TCubeException;
+using Perm.Core.RequestManager.Processor.PermException;
 using Perm.Security.AuthenticateManager;
 
 namespace Perm.Admin.User.Component.Service;

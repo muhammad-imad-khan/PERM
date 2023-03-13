@@ -1,10 +1,5 @@
 ﻿namespace Perm.Common.APIModel
 {
-    //TODO: add "where" clause for generic type
-    /// <summary>
-    ///     This is generic model and will be return for all response.
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
     public class ResponseModel<T>
     {
         public T Data { get; set; }

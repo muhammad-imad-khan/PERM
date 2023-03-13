@@ -15,7 +15,7 @@ using Perm.Common;
 using Perm.Model.Config;
 using Perm.Model.Abstraction;
 using Perm.Core.ExceptionManager;
-using Perm.Core.RequestManager.Processor.TCubeException;
+using Perm.Core.RequestManager.Processor.PermException;
 using Perm.Model.Setup;
 
 namespace Perm.DataAccessLayer.Database.SqlServer;

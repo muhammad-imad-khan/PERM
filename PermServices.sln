@@ -5,49 +5,49 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{93E94777-0CED-434C-8F8D-E0069E8AB081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Common", "Common\Perm.Common\Perm.Common.csproj", "{F159A322-28E9-43D3-8B08-BBF729762E20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Common", "Common\Perm.Common\Perm.Common.csproj", "{F159A322-28E9-43D3-8B08-BBF729762E20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Common.APIModel", "Common\Perm.Common.APIModel\Perm.Common.APIModel.csproj", "{0B369E9C-90BB-4DD5-929A-9FEA8E23A0EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Common.APIModel", "Common\Perm.Common.APIModel\Perm.Common.APIModel.csproj", "{0B369E9C-90BB-4DD5-929A-9FEA8E23A0EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Common.APIHelper", "Common\Perm.Common.APIHelper\Perm.Common.APIHelper.csproj", "{FA2D9730-C7D8-4D4C-AF48-98B38B6A7645}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Common.APIHelper", "Common\Perm.Common.APIHelper\Perm.Common.APIHelper.csproj", "{FA2D9730-C7D8-4D4C-AF48-98B38B6A7645}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{883098FB-CB61-4BE1-9106-8F069C7B8DCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Core.CacheManager", "Core\Perm.Core.CacheManager\Perm.Core.CacheManager.csproj", "{B83D6EB7-5EFE-44C1-BCFE-659EC877AA23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Core.CacheManager", "Core\Perm.Core.CacheManager\Perm.Core.CacheManager.csproj", "{B83D6EB7-5EFE-44C1-BCFE-659EC877AA23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Core.DependencyLoader", "Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj", "{F458B8D0-0243-45A1-BC7C-8F4B508BFBD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Core.DependencyLoader", "Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj", "{F458B8D0-0243-45A1-BC7C-8F4B508BFBD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Core.ExceptionManager", "Core\Perm.Core.ExceptionManager\Perm.Core.ExceptionManager.csproj", "{3755ED1A-CBDB-46A4-BDE1-43C020EB951F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Core.ExceptionManager", "Core\Perm.Core.ExceptionManager\Perm.Core.ExceptionManager.csproj", "{3755ED1A-CBDB-46A4-BDE1-43C020EB951F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Core.ComponentFactoryManager", "Core\Perm.Core.ComponentFactoryManager\Perm.Core.ComponentFactoryManager.csproj", "{1C70E60C-48E0-40D6-9288-785D46E40D9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Core.ComponentFactoryManager", "Core\Perm.Core.ComponentFactoryManager\Perm.Core.ComponentFactoryManager.csproj", "{1C70E60C-48E0-40D6-9288-785D46E40D9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Core.TenantManager", "Core\Perm.Core.TenantManager\Perm.Core.TenantManager.csproj", "{E4A09857-37AB-420B-974A-5C656DE3A060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Core.TenantManager", "Core\Perm.Core.TenantManager\Perm.Core.TenantManager.csproj", "{E4A09857-37AB-420B-974A-5C656DE3A060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Core.TenantManager.Abstraction", "Core\Perm.Core.TenantManager.Abstraction\Perm.Core.TenantManager.Abstraction.csproj", "{D87D7A4D-D9CB-434A-8348-3CEAFD97B1B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Core.TenantManager.Abstraction", "Core\Perm.Core.TenantManager.Abstraction\Perm.Core.TenantManager.Abstraction.csproj", "{D87D7A4D-D9CB-434A-8348-3CEAFD97B1B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Core.RequestManager.Processor", "Core\Perm.Core.RequestManager.Processor\Perm.Core.RequestManager.Processor.csproj", "{5301B55D-AD72-4CF3-8109-6781701CF3AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Core.RequestManager.Processor", "Core\Perm.Core.RequestManager.Processor\Perm.Core.RequestManager.Processor.csproj", "{5301B55D-AD72-4CF3-8109-6781701CF3AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Core.RequestManager", "Core\Perm.Core.RequestManager\Perm.Core.RequestManager.csproj", "{6E8794DE-AB97-4A14-A69A-48B4BF4CC179}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Core.RequestManager", "Core\Perm.Core.RequestManager\Perm.Core.RequestManager.csproj", "{6E8794DE-AB97-4A14-A69A-48B4BF4CC179}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{16DBDC1C-86AC-4CBA-BAAE-7F06B2D6CD48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Security.SecurityKeys", "Security\Perm.Security.SecurityKeys\Perm.Security.SecurityKeys.csproj", "{846E932D-8DEF-4B85-B279-2D64766C2146}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Security.SecurityKeys", "Security\Perm.Security.SecurityKeys\Perm.Security.SecurityKeys.csproj", "{846E932D-8DEF-4B85-B279-2D64766C2146}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Security.AuthenticationManager", "Security\Perm.Security.AuthenticationManager\Perm.Security.AuthenticationManager.csproj", "{DBEC050C-A62F-4436-B1BA-4655FFEDBD81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Security.AuthenticationManager", "Security\Perm.Security.AuthenticationManager\Perm.Security.AuthenticationManager.csproj", "{DBEC050C-A62F-4436-B1BA-4655FFEDBD81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccessLayer", "DataAccessLayer", "{98360F46-EB59-4218-9854-240DFB57534C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.DataAccessLayer.Database.SqlServer", "DataAccessLayer\Perm.DataAccessLayer.Database.SqlServer\Perm.DataAccessLayer.Database.SqlServer.csproj", "{54C8F3D2-EF0D-4CF7-B7D4-ED183FE36823}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.DataAccessLayer.Database.SqlServer", "DataAccessLayer\Perm.DataAccessLayer.Database.SqlServer\Perm.DataAccessLayer.Database.SqlServer.csproj", "{54C8F3D2-EF0D-4CF7-B7D4-ED183FE36823}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{1D79EF60-275C-470A-B929-D61086192FDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Model.Config", "Model\Perm.Model.Config\Perm.Model.Config.csproj", "{2EBDAC9D-4F9F-43C1-B8C0-4408DF3A798B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Model.Config", "Model\Perm.Model.Config\Perm.Model.Config.csproj", "{2EBDAC9D-4F9F-43C1-B8C0-4408DF3A798B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Model.Abstraction", "Model\Perm.Model.Abstraction\Perm.Model.Abstraction.csproj", "{121F89DA-918B-418E-BAB2-000B4C8BE6D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Model.Abstraction", "Model\Perm.Model.Abstraction\Perm.Model.Abstraction.csproj", "{121F89DA-918B-418E-BAB2-000B4C8BE6D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.DataAccessLayer.DataRepository.Core", "DataAccessLayer\Perm.DataAccessLayer.DataRepository.Core\Perm.DataAccessLayer.DataRepository.Core.csproj", "{6C1A1C82-9D7E-42FD-96E7-BEEFEC6C38F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.DataAccessLayer.DataRepository.Core", "DataAccessLayer\Perm.DataAccessLayer.DataRepository.Core\Perm.DataAccessLayer.DataRepository.Core.csproj", "{6C1A1C82-9D7E-42FD-96E7-BEEFEC6C38F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Model.Setup", "Model\Perm.Model.Setup\Perm.Model.Setup.csproj", "{BED6DF82-3695-440D-B8A1-1946413885DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Model.Setup", "Model\Perm.Model.Setup\Perm.Model.Setup.csproj", "{BED6DF82-3695-440D-B8A1-1946413885DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Component", "Component", "{4DDD268A-8E3C-4A7B-BC9E-519925270BBA}"
 EndProject
@@ -57,27 +57,41 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{5835D2E1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Login", "Login", "{5CF05AD0-6AFB-4214-AB6B-C79168E68B15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Admin.Login.Component", "Component\Admin\Login\Perm.Admin.Login.Component\Perm.Admin.Login.Component.csproj", "{7C0EB9E3-AFF5-47CD-ADB9-DBC811D9BF37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Admin.Login.Component", "Component\Admin\Login\Perm.Admin.Login.Component\Perm.Admin.Login.Component.csproj", "{7C0EB9E3-AFF5-47CD-ADB9-DBC811D9BF37}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationParamDetail", "ApplicationParamDetail", "{90DF3998-1F6D-4F2E-8907-027616FB0C64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Config.ApplicationParamDetail.Data", "Component\Config\ApplicationParamDetail\Perm.Config.ApplicationParamDetail.Data\Perm.Config.ApplicationParamDetail.Data.csproj", "{0196EF9D-ECE6-4BDE-A7DC-07C4A3F3DD70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Config.ApplicationParamDetail.Data", "Component\Config\ApplicationParamDetail\Perm.Config.ApplicationParamDetail.Data\Perm.Config.ApplicationParamDetail.Data.csproj", "{0196EF9D-ECE6-4BDE-A7DC-07C4A3F3DD70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Config.ApplicationParamDetail.Component", "Component\Config\ApplicationParamDetail\Perm.Config.ApplicationParamDetail.Component\Perm.Config.ApplicationParamDetail.Component.csproj", "{6FE553BF-BC9A-4F88-ABB6-5A48DEA1CE5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Config.ApplicationParamDetail.Component", "Component\Config\ApplicationParamDetail\Perm.Config.ApplicationParamDetail.Component\Perm.Config.ApplicationParamDetail.Component.csproj", "{6FE553BF-BC9A-4F88-ABB6-5A48DEA1CE5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Admin.Model", "Model\Perm.Admin.Model\Perm.Admin.Model.csproj", "{764C4DA1-073B-45C0-953A-D063E5CF1D18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Admin.Model", "Model\Perm.Admin.Model\Perm.Admin.Model.csproj", "{764C4DA1-073B-45C0-953A-D063E5CF1D18}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{31D9775E-19F9-4C40-9D98-6B753C28C29C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Admin.User.Data", "Component\Admin\User\Perm.Admin.User.Data\Perm.Admin.User.Data.csproj", "{A8E8CD88-CAD8-4DD3-A76A-E9051590E42B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Admin.User.Data", "Component\Admin\User\Perm.Admin.User.Data\Perm.Admin.User.Data.csproj", "{A8E8CD88-CAD8-4DD3-A76A-E9051590E42B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Admin.User.Component", "Component\Admin\User\Perm.Admin.User.Component\Perm.Admin.User.Component.csproj", "{A8F83B68-7374-4C8E-BB92-5B0F468774F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Admin.User.Component", "Component\Admin\User\Perm.Admin.User.Component\Perm.Admin.User.Component.csproj", "{A8F83B68-7374-4C8E-BB92-5B0F468774F3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Role", "Role", "{55F5BCC5-76E6-4EA5-9E87-A7639F05D6BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Admin.Role.Data", "Component\Admin\Role\Perm.Admin.Role.Data\Perm.Admin.Role.Data.csproj", "{09B01C16-8376-4D47-868F-3B6E4EBEB638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Admin.Role.Data", "Component\Admin\Role\Perm.Admin.Role.Data\Perm.Admin.Role.Data.csproj", "{09B01C16-8376-4D47-868F-3B6E4EBEB638}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Admin.Role.Component", "Component\Admin\Role\Perm.Admin.Role.Component\Perm.Admin.Role.Component.csproj", "{FFB89E06-113D-43EC-9A5F-5E6741B7A754}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Admin.Role.Component", "Component\Admin\Role\Perm.Admin.Role.Component\Perm.Admin.Role.Component.csproj", "{FFB89E06-113D-43EC-9A5F-5E6741B7A754}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Audit CLR", "Audit CLR", "{C4BBEED2-8AFE-4891-88C8-F0551BD8CE7E}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Perm.Database.Audit", "Audit CLR\Perm.Database.Audit\Perm.Database.Audit.sqlproj", "{46C64E3E-7828-46EF-ADFA-951C667AED2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common CLR", "Common CLR", "{8FFC40CB-164E-4A43-ACA6-204A52AF821F}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Perm.CLR.Common", "Common CLR\Perm.CLR.Common\Perm.CLR.Common.sqlproj", "{5A7DD89C-6C18-4734-9A48-448912940730}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Audit", "Audit", "{85B42DC2-190F-49F3-A50A-EBE278F97073}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Admin.AuditTrail.Data", "Component\Admin\Audit\Perm.Admin.AuditTrail.Data\Perm.Admin.AuditTrail.Data.csproj", "{15FFE2D3-3DE9-43C7-B301-D16C5F7693AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.Admin.Audit.Component", "Component\Admin\Audit\Perm.Admin.Audit.Component\Perm.Admin.Audit.Component.csproj", "{63763FB1-FA5B-48B8-87AA-FD99B531BC40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +203,26 @@ Global
 		{FFB89E06-113D-43EC-9A5F-5E6741B7A754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFB89E06-113D-43EC-9A5F-5E6741B7A754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFB89E06-113D-43EC-9A5F-5E6741B7A754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C64E3E-7828-46EF-ADFA-951C667AED2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C64E3E-7828-46EF-ADFA-951C667AED2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C64E3E-7828-46EF-ADFA-951C667AED2A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{46C64E3E-7828-46EF-ADFA-951C667AED2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C64E3E-7828-46EF-ADFA-951C667AED2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C64E3E-7828-46EF-ADFA-951C667AED2A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5A7DD89C-6C18-4734-9A48-448912940730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A7DD89C-6C18-4734-9A48-448912940730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A7DD89C-6C18-4734-9A48-448912940730}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5A7DD89C-6C18-4734-9A48-448912940730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A7DD89C-6C18-4734-9A48-448912940730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A7DD89C-6C18-4734-9A48-448912940730}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{15FFE2D3-3DE9-43C7-B301-D16C5F7693AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15FFE2D3-3DE9-43C7-B301-D16C5F7693AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15FFE2D3-3DE9-43C7-B301-D16C5F7693AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15FFE2D3-3DE9-43C7-B301-D16C5F7693AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63763FB1-FA5B-48B8-87AA-FD99B531BC40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63763FB1-FA5B-48B8-87AA-FD99B531BC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63763FB1-FA5B-48B8-87AA-FD99B531BC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63763FB1-FA5B-48B8-87AA-FD99B531BC40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -226,6 +260,11 @@ Global
 		{55F5BCC5-76E6-4EA5-9E87-A7639F05D6BF} = {5835D2E1-24EC-43DE-8526-173A8A3DE019}
 		{09B01C16-8376-4D47-868F-3B6E4EBEB638} = {55F5BCC5-76E6-4EA5-9E87-A7639F05D6BF}
 		{FFB89E06-113D-43EC-9A5F-5E6741B7A754} = {55F5BCC5-76E6-4EA5-9E87-A7639F05D6BF}
+		{46C64E3E-7828-46EF-ADFA-951C667AED2A} = {C4BBEED2-8AFE-4891-88C8-F0551BD8CE7E}
+		{5A7DD89C-6C18-4734-9A48-448912940730} = {8FFC40CB-164E-4A43-ACA6-204A52AF821F}
+		{85B42DC2-190F-49F3-A50A-EBE278F97073} = {5835D2E1-24EC-43DE-8526-173A8A3DE019}
+		{15FFE2D3-3DE9-43C7-B301-D16C5F7693AE} = {85B42DC2-190F-49F3-A50A-EBE278F97073}
+		{63763FB1-FA5B-48B8-87AA-FD99B531BC40} = {85B42DC2-190F-49F3-A50A-EBE278F97073}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBBA475B-75DB-4743-B547-571A3A964706}

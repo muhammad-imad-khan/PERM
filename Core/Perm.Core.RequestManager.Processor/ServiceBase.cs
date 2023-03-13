@@ -2,7 +2,7 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Perm.Common.APIModel;
-using Perm.Core.RequestManager.Processor.TCubeException;
+using Perm.Core.RequestManager.Processor.PermException;
 
 namespace Perm.Core.RequestManager.Processor
 {

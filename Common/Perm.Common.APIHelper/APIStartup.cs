@@ -22,7 +22,7 @@ namespace Perm.Common.APIHelper
 {
     public static class ApiStartup
     {
-        public static IServiceCollection TCubeServiceCollection(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection PermServiceCollection(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddEFSecondLevelCache(options =>
             {
@@ -89,7 +89,7 @@ namespace Perm.Common.APIHelper
             return services;
         }
 
-        public static IApplicationBuilder TCubeAppConfigure(this IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider services, IEnumerable<ServiceBase> moduleBase)
+        public static IApplicationBuilder PermAppConfigure(this IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider services, IEnumerable<ServiceBase> moduleBase)
         {
             if (env.IsDevelopment())
             {
