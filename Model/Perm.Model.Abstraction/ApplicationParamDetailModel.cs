@@ -1,8 +1,7 @@
-﻿using Perm.Model.Abstraction;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Perm.Model.Config
+namespace Perm.Model.Abstraction
 {
     [Table(name: "ApplicationParamDetail", Schema = "Config")]
     public class ApplicationParamDetailModel : ModelBase

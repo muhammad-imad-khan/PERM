@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Perm.DataAccessLayer.Database.SqlServer;
 using Perm.DataAccessLayer.DataRepository.Core;
-using Perm.Model.Config;
+using Perm.Model.Abstraction;
 
 namespace Perm.Config.ApplicationParamDetail.Data.Repository
 {

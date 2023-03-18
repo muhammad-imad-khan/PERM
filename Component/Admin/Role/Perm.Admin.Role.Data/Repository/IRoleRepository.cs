@@ -1,5 +1,5 @@
 ﻿using Perm.Admin.Model;
-using Perm.DataAccessLayer.DataRepository.Core;
+using Perm.DataAccessLayer.DataRepository.Core.Abstraction;
 
 namespace Perm.Admin.Role.Data.Repository
 {

@@ -1,4 +1,4 @@
-﻿using Perm.DataAccessLayer.DataRepository.Core;
+﻿using Perm.DataAccessLayer.DataRepository.Core.Abstraction;
 
 namespace Perm.Admin.AuditTrail.Data.Repository
 {

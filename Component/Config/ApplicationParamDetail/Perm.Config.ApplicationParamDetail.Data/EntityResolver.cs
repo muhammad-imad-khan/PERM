@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Perm.DataAccessLayer.Database.SqlServer;
-using Perm.Model.Config;
+using Perm.Model.Abstraction;
 using System.ComponentModel.Composition;
 
 namespace Perm.Config.ApplicationParamDetail.Data

@@ -2,7 +2,7 @@
 using Perm.DataAccessLayer.DataRepository.Core.Model;
 using System.Linq.Expressions;
 
-namespace Perm.DataAccessLayer.DataRepository.Core;
+namespace Perm.DataAccessLayer.DataRepository.Core.Abstraction;
 
 /// <summary>
 /// Generic Repository inherit it to perform data related operations on SQL Server Database. It implements repository pattern.

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Primitives;
 using Perm.Common;
 using Perm.Core.TenantManager.Abstraction;
 using Perm.DataAccessLayer.Database.SqlServer;
+using Perm.DataAccessLayer.DataRepository.Core.Abstraction;
 using Perm.DataAccessLayer.DataRepository.Core.Model;
 using Perm.Model.Abstraction;
 using System.Linq.Expressions;

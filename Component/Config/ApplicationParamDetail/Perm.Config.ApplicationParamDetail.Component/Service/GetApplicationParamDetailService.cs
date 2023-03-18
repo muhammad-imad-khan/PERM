@@ -2,7 +2,7 @@
 using Perm.Config.ApplicationParamDetail.Data.Repository;
 using Perm.Core.RequestManager.Processor;
 using Perm.DataAccessLayer.DataRepository.Core.Model;
-using Perm.Model.Config;
+using Perm.Model.Abstraction;
 
 namespace Perm.Config.ApplicationParamDetail.Component.Service;
 

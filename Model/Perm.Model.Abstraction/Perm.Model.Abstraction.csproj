@@ -6,4 +6,8 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Perm.Common.APIModel\Perm.Common.APIModel.csproj" />
+  </ItemGroup>
+
 </Project>

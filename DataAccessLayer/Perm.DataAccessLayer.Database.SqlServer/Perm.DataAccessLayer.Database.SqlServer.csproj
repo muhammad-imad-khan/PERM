@@ -26,7 +26,6 @@
 	  <ProjectReference Include="..\..\Common\Perm.Common\Perm.Common.csproj" />
 	  <ProjectReference Include="..\..\Core\Perm.Core.CacheManager\Perm.Core.CacheManager.csproj" />
 	  <ProjectReference Include="..\..\Core\Perm.Core.ExceptionManager\Perm.Core.ExceptionManager.csproj" />
-	  <ProjectReference Include="..\..\Core\Perm.Core.RequestManager.Processor\Perm.Core.RequestManager.Processor.csproj" />
 	  <ProjectReference Include="..\..\Core\Perm.Core.TenantManager.Abstraction\Perm.Core.TenantManager.Abstraction.csproj" />
 	  <ProjectReference Include="..\..\Model\Perm.Model.Config\Perm.Model.Config.csproj" />
 	  <ProjectReference Include="..\..\Model\Perm.Model.Setup\Perm.Model.Setup.csproj" />
