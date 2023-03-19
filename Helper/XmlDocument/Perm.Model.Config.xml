@@ -13,12 +13,12 @@
             
             </summary>
         </member>
-        <member name="P:Perm.Model.Config.ResponseMessageModel.ResponseCode">
+        <member name="P:Perm.Model.Config.ResponseMessageModel.Code">
             <summary>
             Error code identifier
             </summary>
         </member>
-        <member name="P:Perm.Model.Config.ResponseMessageModel.ResponseMessage">
+        <member name="P:Perm.Model.Config.ResponseMessageModel.Message">
             <summary>
             User friendly message to be shown on UI
             </summary>

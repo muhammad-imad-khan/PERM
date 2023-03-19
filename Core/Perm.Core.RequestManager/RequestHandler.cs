@@ -38,7 +38,7 @@ public static class RequestHandler
         catch (PermException ex)
         {
 
-            ResponseMessageModel responseMessageModel = dataContext.ResponseMessage.ToList().FirstOrDefault(s => s.ResponseCode == ex.ResponseCode);
+            ResponseMessageModel responseMessageModel = dataContext.ResponseMessage.ToList().FirstOrDefault(s => s.Code == ex.ResponseCode);
 
             string message;
             if (responseMessageModel == null)
@@ -49,11 +49,11 @@ public static class RequestHandler
             {
                 if (ex.Param == null || ex.Param.Length == 0 || ex.Param.Any(p => p == null))
                 {
-                    message = responseMessageModel.ResponseMessage;
+                    message = responseMessageModel.Message;
                 }
                 else
                 {
-                    message = string.Format(responseMessageModel.ResponseMessage, ex.Param);
+                    message = string.Format(responseMessageModel.Message, ex.Param);
                 }
             }
 

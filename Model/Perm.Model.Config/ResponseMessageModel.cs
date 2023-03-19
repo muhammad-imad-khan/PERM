@@ -19,13 +19,13 @@ namespace Perm.Model.Config
         /// </summary>
         [Required]
         [StringLength(4)]
-        public string ResponseCode { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// User friendly message to be shown on UI
         /// </summary>
         [Required]
         [StringLength(500)]
-        public string ResponseMessage { get; set; }
+        public string Message { get; set; }
     }
 }

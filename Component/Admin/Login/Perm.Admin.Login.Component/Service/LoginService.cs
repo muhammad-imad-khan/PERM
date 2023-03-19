@@ -52,9 +52,7 @@ public class LoginService : ServiceBase
         else if (!HashPassword.Verify(reqLoginModel.Password, userModel.Password))
             throw new PermBusinessException("0004");
         else if (userModel.IsActive == false)
-            throw new PermBusinessException("0072");
-        else if (userModel.IsDeleted == true)
-            throw new PermBusinessException("0080");
+            throw new PermBusinessException("0009");
 
         _httpContextAccessor.HttpContext.Items["UserID"] = userModel.UserID;
 
