@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Common.APIHelper</name>
+    </assembly>
+    <members>
+        <member name="M:Perm.Common.APIHelper.ApiStartup.InitializeMainMethod(System.String[])">
+            <summary>
+                Entry method of API
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Perm.Common.APIHelper.ExtensionMethods.GetHeader``1(Microsoft.AspNetCore.Http.IHttpContextAccessor,System.String)">
+            <summary>
+            Get header value from IHttpContextAccessor
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="httpContextAccessor"></param>
+            <param name="headerName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

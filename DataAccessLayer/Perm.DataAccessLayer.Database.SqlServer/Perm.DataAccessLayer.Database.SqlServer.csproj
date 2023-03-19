@@ -2,33 +2,55 @@
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.DataAccessLayer.Database.SqlServer.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
-	    <PrivateAssets>all</PrivateAssets>
-	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-	  </PackageReference>
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.0" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.0" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
-	    <PrivateAssets>all</PrivateAssets>
-	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-	  </PackageReference>
-	  <PackageReference Include="System.ComponentModel.Composition" Version="7.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Roslynator.Analyzers" Version="4.2.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Roslynator.CodeAnalysis.Analyzers" Version="4.2.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.2.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="System.ComponentModel.Composition" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Common\Perm.Common\Perm.Common.csproj" />
-	  <ProjectReference Include="..\..\Core\Perm.Core.CacheManager\Perm.Core.CacheManager.csproj" />
-	  <ProjectReference Include="..\..\Core\Perm.Core.ExceptionManager\Perm.Core.ExceptionManager.csproj" />
-	  <ProjectReference Include="..\..\Core\Perm.Core.TenantManager.Abstraction\Perm.Core.TenantManager.Abstraction.csproj" />
-	  <ProjectReference Include="..\..\Model\Perm.Model.Config\Perm.Model.Config.csproj" />
-	  <ProjectReference Include="..\..\Model\Perm.Model.Setup\Perm.Model.Setup.csproj" />
+		<ProjectReference Include="..\..\Common\Perm.Common\Perm.Common.csproj" />
+		<ProjectReference Include="..\..\Core\Perm.Core.CacheManager\Perm.Core.CacheManager.csproj" />
+		<ProjectReference Include="..\..\Core\Perm.Core.ExceptionManager\Perm.Core.ExceptionManager.csproj" />
+		<ProjectReference Include="..\..\Core\Perm.Core.TenantManager.Abstraction\Perm.Core.TenantManager.Abstraction.csproj" />
+		<ProjectReference Include="..\..\Model\Perm.Model.Config\Perm.Model.Config.csproj" />
+		<ProjectReference Include="..\..\Model\Perm.Model.Setup\Perm.Model.Setup.csproj" />
 	</ItemGroup>
 
 </Project>

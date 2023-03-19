@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Perm.Admin.Model
+namespace Perm.Model.Admin
 {
     [Table(name: "UserRole", Schema = "Admin")]
     public class UserRoleModel : ModelBase

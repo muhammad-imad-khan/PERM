@@ -12,9 +12,9 @@ namespace Perm.Database.Audit
             return InsertedQuery;
         }
 
-        public override List<AuditTrailModel> GetAuditModels(DataSet dataSet)
+        public override List<AuditModel> GetAuditModels(DataSet dataSet)
         {
-            List<AuditTrailModel> auditTails = new List<AuditTrailModel>();
+            List<AuditModel> auditTails = new List<AuditModel>();
             DataRow newRecord = dataSet.Tables[0].Rows[0];
 
             string primaryKeyColumn = newRecord.Table.Columns[0].ColumnName;
@@ -28,7 +28,7 @@ namespace Perm.Database.Audit
                 string newValue = newRecord.FormattedValue(columnName);
                 if (!string.IsNullOrEmpty(newValue))
                 {
-                    auditTails.Add(new AuditTrailModel
+                    auditTails.Add(new AuditModel
                     {
                         ChangeOn = DateTime.Now,
                         ColumnName = columnName,

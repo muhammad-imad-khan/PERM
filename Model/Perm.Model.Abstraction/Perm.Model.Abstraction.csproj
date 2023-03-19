@@ -1,13 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.Model.Abstraction.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Common\Perm.Common.APIModel\Perm.Common.APIModel.csproj" />
-  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Common\Perm.Common.APIModel\Perm.Common.APIModel.csproj" />
+	</ItemGroup>
 
 </Project>

@@ -2,12 +2,22 @@
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.Model.Config.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Perm.Model.Abstraction\Perm.Model.Abstraction.csproj" />
+		<ProjectReference Include="..\Perm.Model.Abstraction\Perm.Model.Abstraction.csproj" />
 	</ItemGroup>
 
 </Project>

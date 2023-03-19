@@ -2,7 +2,7 @@ using System;
 
 namespace Perm.Database.Audit
 {
-    public class AuditTrailModel
+    public class AuditModel
     {
         public string TableName { get; set; }
         public long RecordID { get; set; }

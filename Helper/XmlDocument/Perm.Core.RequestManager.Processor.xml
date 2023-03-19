@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Core.RequestManager.Processor</name>
+    </assembly>
+    <members>
+        <member name="T:Perm.Core.RequestManager.Processor.AuthenticateAttribute">
+            <summary>
+            Authenticate attribute
+            </summary>
+        </member>
+        <member name="P:Perm.Core.RequestManager.Processor.ServiceBase.HttpMethod">
+            <summary>
+            Get http method of service
+            </summary>
+        </member>
+        <member name="M:Perm.Core.RequestManager.Processor.ServiceBase.HandleError(Perm.Common.APIModel.IRequestModel,System.Exception)">
+            <summary>
+            Override this method to handle your service level exception
+            </summary>
+            <param name="requestModel">Request model</param>
+            <param name="ex">Raised exception</param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.Core.RequestManager.Processor.ServiceBase.Validate(Perm.Common.APIModel.IRequestModel)">
+            <summary>
+            Override this method to customize your validation for further processing
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

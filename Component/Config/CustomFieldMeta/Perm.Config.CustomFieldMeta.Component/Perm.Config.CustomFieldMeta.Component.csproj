@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.Config.CustomFieldMeta.Component.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\..\Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
+		<ProjectReference Include="..\..\..\..\DataAccessLayer\Perm.DataAccessLayer.DataRepository.Core\Perm.DataAccessLayer.DataRepository.Core.csproj" />
+	</ItemGroup>
+
+</Project>

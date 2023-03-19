@@ -1,10 +1,10 @@
-﻿using Perm.Admin.Model;
-using Perm.Admin.User.Component.APIModel;
+﻿using Perm.Admin.User.Component.APIModel;
 using Perm.Admin.User.Data.Repository;
 using Perm.Common.APIModel;
 using Perm.Core.ExceptionManager;
 using Perm.Core.RequestManager.Processor;
 using Perm.Core.RequestManager.Processor.PermException;
+using Perm.Model.Admin;
 using Perm.Security.AuthenticateManager;
 
 namespace Perm.Admin.User.Component.Service;

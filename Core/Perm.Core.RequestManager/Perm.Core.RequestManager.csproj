@@ -2,16 +2,26 @@
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.Core.RequestManager.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Common\Perm.Common.APIModel\Perm.Common.APIModel.csproj" />
-	  <ProjectReference Include="..\..\Common\Perm.Common\Perm.Common.csproj" />
-	  <ProjectReference Include="..\Perm.Core.ComponentFactoryManager\Perm.Core.ComponentFactoryManager.csproj" />
-	  <ProjectReference Include="..\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
-	  <ProjectReference Include="..\Perm.Core.RequestManager.Processor\Perm.Core.RequestManager.Processor.csproj" />
+		<ProjectReference Include="..\..\Common\Perm.Common.APIModel\Perm.Common.APIModel.csproj" />
+		<ProjectReference Include="..\..\Common\Perm.Common\Perm.Common.csproj" />
+		<ProjectReference Include="..\Perm.Core.ComponentFactoryManager\Perm.Core.ComponentFactoryManager.csproj" />
+		<ProjectReference Include="..\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
+		<ProjectReference Include="..\Perm.Core.RequestManager.Processor\Perm.Core.RequestManager.Processor.csproj" />
 	</ItemGroup>
 
 </Project>

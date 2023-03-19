@@ -11,7 +11,7 @@ namespace Perm.Database.Audit
         protected const string DeletedQuery = "SELECT * FROM Deleted;";
         protected abstract string GetTriggerDataQuery();
 
-        public abstract List<AuditTrailModel> GetAuditModels(DataSet dataSet);
+        public abstract List<AuditModel> GetAuditModels(DataSet dataSet);
         SqlConnection _sqlCnn;
 
         private SqlConnection GetSqlConnection()
@@ -29,8 +29,8 @@ namespace Perm.Database.Audit
         {
             DataSet dataSet = GetTriggerData();
 
-            List<AuditTrailModel> auditTrails = GetAuditModels(dataSet);
-            string insertStatement = auditTrails.GenerateScript();
+            List<AuditModel> audit = GetAuditModels(dataSet);
+            string insertStatement = audit.GenerateScript();
 
             AddAuditRecord(insertStatement);
         }

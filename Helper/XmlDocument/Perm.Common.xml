@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Perm.Common.Constant">
+            <summary>
+            Application wide constant class to hold the constant variables
+            </summary>
+        </member>
+        <member name="F:Perm.Common.Constant.JSON_DATE_TIME_FORMAT">
+            <summary>
+            Application wide date format
+            </summary>
+        </member>
+        <member name="F:Perm.Common.Constant.ServiceDescriptors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Perm.Common.Constant.DEFAULT_PAGE_ROW_COUNT">
+            <summary>
+            default pagination size
+            </summary>
+        </member>
+        <member name="M:Perm.Common.StringHelper.GetBetweenString(System.String,System.String,System.String)">
+            <summary>
+            Get string between two strings in a string
+            </summary>
+            <param name="source"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.Common.StringHelper.SameAs(System.String,System.String)">
+            <summary>
+            A wrapper of String.Equals with trim
+            </summary>
+            <param name="source"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.Common.StringHelper.SameAsAny(System.String,System.String[])">
+            <summary>
+            A wrapper of String.Equals with trim
+            </summary>
+            <param name="source"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.Common.StringHelper.ToAlphabets(System.String)">
+            <summary>
+            Get only alphabets from string
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

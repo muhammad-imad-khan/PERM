@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Core.DependencyLoader</name>
+    </assembly>
+    <members>
+        <member name="T:Perm.Core.DependencyResolver.IDependencyResolver">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Perm.Core.DependencyResolver.IDependencyResolver.SetUp(Perm.Core.DependencyResolver.IDependencyRegister)">
+            <summary>
+            
+            </summary>
+            <param name="dependencyRegister"></param>
+        </member>
+    </members>
+</doc>

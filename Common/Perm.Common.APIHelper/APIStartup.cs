@@ -10,18 +10,27 @@ using Newtonsoft.Json;
 using Perm.Common.APIHelper.Default;
 using Perm.Core.ComponentFactoryManager;
 using Perm.Core.DependencyResolver;
-using Perm.Core.ModuleFactoryManager;
 using Perm.Core.RequestManager;
 using Perm.Core.RequestManager.Processor;
 using Perm.Core.TenantManager;
 using Perm.Core.TenantManager.Abstraction;
 using Perm.DataAccessLayer.Database.SqlServer;
+using Perm.DataAccessLayer.Database.SqlServer.Interceptor;
 using Perm.Security.AuthenticateManager;
 
 namespace Perm.Common.APIHelper
 {
     public static class ApiStartup
     {
+        /// <summary>
+        ///     Entry method of API
+        /// </summary>
+        /// <param name="args"></param>
+        public static IHostBuilder InitializeMainMethod(string[] args)
+        {
+            return CreateHostBuilder(args);
+        }
+
         public static IServiceCollection PermServiceCollection(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddEFSecondLevelCache(options =>
@@ -89,7 +98,7 @@ namespace Perm.Common.APIHelper
             return services;
         }
 
-        public static IApplicationBuilder PermAppConfigure(this IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider services, IEnumerable<ServiceBase> moduleBase)
+        public static IApplicationBuilder PermAppConfigure(this IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider services, IEnumerable<ServiceBase> componentBase)
         {
             if (env.IsDevelopment())
             {
@@ -107,6 +116,7 @@ namespace Perm.Common.APIHelper
             app.UseCors();
 
             app.UseStaticFiles();
+
             app.UseMvcWithDefaultRoute();
 
             app.UseEndpoints(endpoints =>
@@ -114,7 +124,7 @@ namespace Perm.Common.APIHelper
                 endpoints.MapControllers();
             });
 
-            app.MapRestApi(services, moduleBase.ToList());
+            app.MapRestApi(services, componentBase.ToList());
 
             return app;
         }

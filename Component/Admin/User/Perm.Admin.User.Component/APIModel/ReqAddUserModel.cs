@@ -1,9 +1,9 @@
-﻿using Perm.Admin.Model;
-using Perm.Common.APIModel;
+﻿using Perm.Common.APIModel;
+using Perm.Model.Admin;
 
 namespace Perm.Admin.User.Component.APIModel
 {
-    internal class ReqAddUserModel : UserModel, IRequestModel
+    public class ReqAddUserModel : UserModel, IRequestModel
     {
     }
 }

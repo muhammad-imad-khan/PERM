@@ -1,0 +1,635 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Model.Abstraction</name>
+    </assembly>
+    <members>
+        <member name="T:Perm.Model.Abstraction.CustomFieldMetaModel">
+            <summary>
+            If any table holds the record for custom fields, then this table hold its meta information here
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.CustomMetaID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.ParamEntityTypeID">
+            <summary>
+            Set the table for custom filed
+            ApplicationParamMasterID => 7
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.DisplayName">
+            <summary>
+            Column display name on UI
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.ColumnName">
+            <summary>
+            Column name that need to be add. This column name should be exactly same as defined in Config.CustomField table.
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.ListValuesCSV">
+            <summary>
+            To store list values as csv when list data type is selected.
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.ColumnNumber">
+            <summary>
+            This field extract the number from custom column.
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.ParamDataTypeID">
+            <summary>
+            Specify the data type of column, data type will map the columns defined in custom filed table accordingly.
+            Currently this field accept following values
+            1) STRING
+            2) DATE_TIME
+            3) NUMBER
+            4) AMOUNT
+            5) BOOLEAN
+            6) LIST
+            Reference Master ID => 30
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.Description">
+            <summary>
+            Custom Field Description
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.IsRequired">
+            <summary>
+            Is custom field mandatory to be filled.
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.ParamEntityType">
+            <summary>
+            ---IGNORE_IN_MIGRATIONS---
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldMetaModel.ParamDataType">
+            <summary>
+            ---IGNORE_IN_MIGRATIONS---
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.CustomFieldID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.EntityID">
+            <summary>
+            Acting as foreign key column with the combination of Entity Type.
+            For Example: If we are storing custom fields of User table, then here we will insert the UserID.
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ParamEntityTypeID">
+            <summary>
+            Set the table for custom filed.
+            This field already exist in Config.CustomFieldMeta table, we created this field here too, to avoid the complex join quires.
+            ApplicationParamMasterID => 7
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField1">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField2">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField3">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField4">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField5">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField6">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField7">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField8">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField9">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField10">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField11">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField12">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField13">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField14">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField15">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField16">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField17">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField18">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField19">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.StringField20">
+            <summary>
+            Placeholder to store string
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField1">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField2">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField3">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField4">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField5">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField6">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField7">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField8">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField9">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField10">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField11">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField12">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField13">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField14">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField15">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField16">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField17">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField18">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField19">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.NumberField20">
+            <summary>
+            Placeholder to store number
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField1">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField2">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField3">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField4">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField5">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField6">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField7">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField8">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField9">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField10">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField11">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField12">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField13">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField14">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField15">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField16">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField17">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField18">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField19">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.DateField20">
+            <summary>
+            Placeholder to store datetime
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField1">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField2">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField3">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField4">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField5">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField6">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField7">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField8">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField9">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField10">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField11">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField12">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField13">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField14">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField15">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField16">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField17">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField18">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField19">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.AmountField20">
+            <summary>
+            Placeholder to store amount
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField1">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField2">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField3">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField4">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField5">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField6">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField7">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField8">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField9">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.BoolField10">
+            <summary>
+            Placeholder to store boolean
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField1">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField2">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField3">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField4">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField5">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField6">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField7">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField8">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField9">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModel.ListField10">
+            <summary>
+            Placeholder to store list field value
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModelBase.CustomField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Abstraction.CustomFieldModelBase.CustomFields">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Perm.Model.Abstraction.Enum.EnumCustomFieldDataType.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Perm.Model.Abstraction.Enum.EnumCustomFieldDataType.Amount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Perm.Model.Abstraction.Enum.EnumCustomFieldDataType.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Perm.Model.Abstraction.Enum.EnumCustomFieldDataType.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Perm.Model.Abstraction.Enum.EnumCustomFieldDataType.YesNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Perm.Model.Abstraction.Enum.EnumCustomFieldDataType.List">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

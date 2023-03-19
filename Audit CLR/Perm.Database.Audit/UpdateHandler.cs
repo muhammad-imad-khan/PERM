@@ -11,9 +11,9 @@ namespace Perm.Database.Audit
             return InsertedQuery + Environment.NewLine + DeletedQuery;
         }
 
-        public override List<AuditTrailModel> GetAuditModels(DataSet dataSet)
+        public override List<AuditModel> GetAuditModels(DataSet dataSet)
         {
-            List<AuditTrailModel> auditTails = new List<AuditTrailModel>();
+            List<AuditModel> auditTails = new List<AuditModel>();
             DataRow newRecord = dataSet.Tables[0].Rows[0];
             DataRow oldRecord = dataSet.Tables[1].Rows[0];
 
@@ -29,7 +29,7 @@ namespace Perm.Database.Audit
                 string newValue = newRecord.FormattedValue(columnName);
                 if (oldValue != newValue)
                 {
-                    auditTails.Add(new AuditTrailModel
+                    auditTails.Add(new AuditModel
                     {
                         ChangeOn = DateTime.Now,
                         ColumnName = columnName,

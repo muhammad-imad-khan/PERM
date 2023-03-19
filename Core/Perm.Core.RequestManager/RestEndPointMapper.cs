@@ -12,9 +12,9 @@ namespace Perm.Core.RequestManager
 {
     public static class RestEndpointMapper
     {
-        public static void MapRestApi(this IApplicationBuilder app, IServiceProvider services, List<ServiceBase> moduleBase)
+        public static void MapRestApi(this IApplicationBuilder app, IServiceProvider services, List<ServiceBase> componentBase)
         {
-            DependencyLoader.RegisteredServices = moduleBase;
+            DependencyLoader.RegisteredServices = componentBase;
             IServiceScope serviceScope = services.CreateScope();
             IServiceProvider provider = serviceScope.ServiceProvider;
             app.UseEndpoints(endpoints =>
@@ -22,7 +22,7 @@ namespace Perm.Core.RequestManager
                 List<string> routePatterns = endpoints.DataSources.FirstOrDefault()?.Endpoints.Select(s => (s as RouteEndpoint)).Select(s => (s?.RoutePattern.RawText)).ToList();
                 if (routePatterns != null)
                 {
-                    foreach (ServiceBase serviceBase in moduleBase)
+                    foreach (ServiceBase serviceBase in componentBase)
                     {
                         string endpoint = routePatterns.FirstOrDefault(s => $@"/{s}" == serviceBase.URL);
                         if (endpoint != null)

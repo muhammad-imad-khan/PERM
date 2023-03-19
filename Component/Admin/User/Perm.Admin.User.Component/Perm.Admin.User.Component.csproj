@@ -2,16 +2,25 @@
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.Admin.User.Component.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\..\Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
-		<ProjectReference Include="..\..\..\..\Model\Perm.Admin.Model\Perm.Admin.Model.csproj" />
 		<ProjectReference Include="..\..\..\..\Security\Perm.Security.AuthenticationManager\Perm.Security.AuthenticationManager.csproj" />
-		<ProjectReference Include="..\..\..\Config\ApplicationParamDetail\Perm.Config.ApplicationParamDetail.Data\Perm.Config.ApplicationParamDetail.Data.csproj" />
-		<ProjectReference Include="..\..\Role\Perm.Admin.Role.Data\Perm.Admin.Role.Data.csproj" />
 		<ProjectReference Include="..\Perm.Admin.User.Data\Perm.Admin.User.Data.csproj" />
 	</ItemGroup>
 

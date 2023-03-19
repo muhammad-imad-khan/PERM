@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.DataAccessLayer.DataRepository.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldMetaRepository.GetMetaByEntityTypeAsync(Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <summary>
+                Get the meta data by entity type ID
+            </summary>
+            <param name="entityType">Pass the entity type to get the the meta data by entity type ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldMetaRepository.AddCustomFieldMeta(Perm.Model.Abstraction.CustomFieldMetaModel)">
+            <summary>
+            Add Custom field meta
+            </summary>
+            <param name="customFieldMetaModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldMetaRepository.UpdateCustomFieldMeta(Perm.Model.Abstraction.CustomFieldMetaModel)">
+            <summary>
+            Update Custom field meta
+            </summary>
+            <param name="customFieldMetaModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldMetaRepository.DeleteCustomFieldMeta(System.Int64)">
+            <summary>
+            Delete Custom field meta
+            </summary>
+            <param name="customFieldMetaModelID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldRepository.GetByEntityIDAsync(Perm.Model.Abstraction.Enum.EnumEntityType,System.Int64)">
+            <summary>
+                Get custom field record by Entity ID
+            </summary>
+            <param name="entityType"></param>
+            <param name="entityTypeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldRepository.GetByEntityTypeIDAsync(Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <summary>
+                Get all the record belongs to an entity
+            </summary>
+            <param name="entityType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldRepository.SaveAsync(Perm.Model.Abstraction.CustomFieldModel,System.Int64,Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <summary>
+                Add custom field related to its entity ID
+            </summary>
+            <param name="entity"></param>
+            <param name="entityID"></param>
+            <param name="entityType"></param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldRepository.DeleteAsync(System.Int64,Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <summary>
+                Delete custom field related to its entity ID
+            </summary>
+            <param name="entityID"></param>
+            <param name="entityType"></param>
+        </member>
+        <member name="T:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IEntityWithCustomFieldRepository`1">
+            <summary>
+                This interface is designed for business requirement, to add / remove the custom fields on UI. User can add/remove the
+                columns from view.
+                If you are required to write the repository that will need above functionality, then you will need your repository
+                to be implement this interface.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IEntityWithCustomFieldRepository`1.GetAllWithCustomFieldAsync(Perm.Model.Abstraction.Enum.EnumEntityType,System.Func{`0,System.Int64})">
+            <summary>
+                Get data with addition of custom fields. It will also return the meta of custom field.
+                This method will also insure the Unit of Work, and process the database operation in Unit of Work
+            </summary>
+            <param name="entityType">Entity type ID</param>
+            <param name="getProp">Pass the primary key property as lambda expression to identify the EntityID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IEntityWithCustomFieldRepository`1.AddWithCustomFieldAsync(`0,System.Func{`0,System.Int64},Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <summary>
+                Add record to database with addition of custom field. A custom field object is required to store the data
+                This method will also insure the Unit of Work, and process the database operation in  Unit of Work
+            </summary>
+            <param name="entity">
+                Pass the entity to be add, this entity must have custom field object to store the custom field
+                data
+            </param>
+            <param name="entityID"></param>
+            <param name="entityType">Entity type for the custom field</param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IEntityWithCustomFieldRepository`1.UpdateWithCustomFieldAsync(`0,System.Int64,Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <summary>
+                Update record to database with addition of custom field. A custom field object is required to store the data
+                This method will also insure the Unit of Work, and process the database operation in  Unit of Work
+            </summary>
+            <param name="entity">
+                Pass the entity to be add, this entity must have custom field object to store the custom field
+                data
+            </param>
+            <param name="entityID"></param>
+            <param name="entityType">Entity type for the custom field</param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IEntityWithCustomFieldRepository`1.DeleteWithCustomFieldAsync(`0,System.Int64,Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <summary>
+                Delete record from database with addition of custom field. It will not permanently delete the record from database, it will only flag the IsDeleted column to '0'
+                This method will also insure the Unit of Work, and process the database operation in  Unit of Work
+            </summary>
+            <param name="entity">
+                Pass the entity to be add, this entity must have custom field object to store the custom field
+                data
+            </param>
+            <param name="getProp">Pass the primary key property as lambda expression to identify the EntityID</param>
+            <param name="entityType">Entity type for the custom field</param>
+        </member>
+        <member name="T:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1">
+            <summary>
+            Generic Repository inherit it to perform data related operations on SQL Server Database. It implements repository pattern.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.GetAllWithPagination(System.Boolean)">
+            <summary>
+            Get all entities with pagination
+            </summary>
+            <param name="applyFilter"></param>
+            <returns>Use IQueryable as return type</returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.QueryWithPagination(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)">
+            <summary>
+            For custom query with pagination like 'where' e.t.c
+            </summary>
+            <param name="predict"></param>
+            <param name="applyFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.GetAll(System.Boolean)">
+            <summary>
+            Get all entities
+            </summary>
+            <param name="applyFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)">
+            <summary>
+            For custom query
+            </summary>
+            <param name="predict"></param>
+            <param name="applyFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.AddAsync(`0,System.Func{`0,System.Int64})">
+            <summary>
+            Add entity to database
+            </summary>
+            <param name="entity"></param>
+            <param name="entityID">Sets EntityID in NotesAttachment Model.</param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.AddRange(System.Collections.Generic.List{`0})">
+            <summary>
+            Add multiple entities to database
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.Update(`0,System.Int64)">
+            <summary>
+            Update entity to database
+            </summary>
+            <param name="entity"></param>
+            <param name="entityID">Sets EntityID in NotesAttachment Model.</param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.Delete(`0,System.Int64,System.Boolean)">
+            <summary>
+                Delete entity from database
+            </summary>
+            <param name="entity"></param>
+            <param name="entityID">Uses EntityID to delete NotesAttachments records.</param>
+            <param name="setIsDeletedFlag"></param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.DeleteRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.FirstOrNullAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Get first record in sequence
+            </summary>
+            <param name="predict"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.Update(System.Collections.Generic.List{`0},System.Func{`0,System.Int64})">
+            <summary>
+            Update list of entities.
+            This method also updates / deletes and updates the list records
+            </summary>
+            <param name="entityList"></param>
+            <param name="primaryKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Abstraction.IRepository`1.GetPaginationCriteriaFromHeader">
+            <summary>
+            Read pagination parameter from header
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldMetaRepository.#ctor(Perm.DataAccessLayer.Database.SqlServer.PermDataContext,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldMetaRepository.IncludeForeignKeys(System.Linq.IQueryable{Perm.Model.Abstraction.CustomFieldMetaModel})">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldMetaRepository.GetMetaByEntityTypeAsync(Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldMetaRepository.AddCustomFieldMeta(Perm.Model.Abstraction.CustomFieldMetaModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldMetaRepository.UpdateCustomFieldMeta(Perm.Model.Abstraction.CustomFieldMetaModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldMetaRepository.DeleteCustomFieldMeta(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldRepository.GetByEntityIDAsync(Perm.Model.Abstraction.Enum.EnumEntityType,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldRepository.GetByEntityTypeIDAsync(Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldRepository.SaveAsync(Perm.Model.Abstraction.CustomFieldModel,System.Int64,Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.CustomField.CustomFieldRepository.DeleteAsync(System.Int64,Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.EntityWithCustomFieldRepository`1.#ctor(Perm.DataAccessLayer.Database.SqlServer.PermDataContext,Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldRepository,Perm.DataAccessLayer.DataRepository.Core.Abstraction.ICustomFieldMetaRepository,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.EntityWithCustomFieldRepository`1.GetAllWithCustomFieldAsync(Perm.Model.Abstraction.Enum.EnumEntityType,System.Func{`0,System.Int64})">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.EntityWithCustomFieldRepository`1.AddWithCustomFieldAsync(`0,System.Func{`0,System.Int64},Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.EntityWithCustomFieldRepository`1.UpdateWithCustomFieldAsync(`0,System.Int64,Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.EntityWithCustomFieldRepository`1.DeleteWithCustomFieldAsync(`0,System.Int64,Perm.Model.Abstraction.Enum.EnumEntityType)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.EntityWithCustomFieldRepository`1.MapCustomFieldFromModel(System.Collections.Generic.List{Perm.Common.APIModel.ReqCustomFieldModel})">
+            <summary>
+            Maps the Custom Field List to Custom Field Model, helps setting custom field columns.
+            </summary>
+            <param name="reqCustomFields"></param> RequestCustomFields List
+            <returns></returns>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationList`1.List">
+            <summary>
+            Paged data list
+            </summary>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationList`1.PaginationMeta">
+            <summary>
+            Meta information about applied pagination
+            </summary>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationList`1.AdditionalData">
+            <summary>
+            Additional Response Data
+            </summary>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationList`1.Exception">
+            <summary>
+            If list has any exception
+            </summary>
+        </member>
+        <member name="T:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationMeta">
+            <summary>
+            Meta information about applied pagination
+            </summary>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationMeta.Count">
+            <summary>
+            Total number of records without pagination
+            </summary>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationMeta.PageNumber">
+            <summary>
+            Current page number
+            </summary>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationMeta.RowCount">
+            <summary>
+            Rows to be display for current data list
+            </summary>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationMeta.SortBy">
+            <summary>
+            Sort expression
+            </summary>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationMeta.SortOrder">
+            <summary>
+            Sort order (Asc / Desc)
+            </summary>
+        </member>
+        <member name="T:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationQueryable`1">
+            <summary>
+            If we are queering the paginated data then we need to use this type
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationQueryable`1.ToPaginationListAsync">
+            <summary>
+            Generate the list of pagination queryable list, it also set the metadata of pagination
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationQueryable`1.GetPaginationMeta">
+            <summary>
+            Get pagination info
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Model.PaginationQueryable`1.OriginalQueryable">
+            <summary>
+            Return original queryable object
+            </summary>
+        </member>
+        <member name="T:Perm.DataAccessLayer.DataRepository.Core.Repository`1">
+            <inheritdoc />
+        </member>
+        <member name="P:Perm.DataAccessLayer.DataRepository.Core.Repository`1.TenantConfigModel">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.Filter(System.Linq.IQueryable{`0})">
+            <summary>
+            Override this method to filter your entities
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.GetAllWithPagination(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.QueryWithPagination(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.GetAll(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.Query(System.FormattableString)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.FirstOrNullAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.IncludeForeignKeys(System.Linq.IQueryable{`0})">
+            <summary>
+            If you want to include foreign key in your entity, then you can override this method in your repository and include your foreign keys here.
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.AddAsync(`0,System.Func{`0,System.Int64})">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.AddRange(System.Collections.Generic.List{`0})">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.Update(`0,System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.Update(System.Collections.Generic.List{`0},System.Func{`0,System.Int64})">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.Delete(`0,System.Int64,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.DeleteRange(System.Collections.Generic.IEnumerable{`0})">
+            <inheritdoc />
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.SetEntity(Perm.DataAccessLayer.Database.SqlServer.PermDataContext)">
+            <summary>
+                cannot use this method in constructor, because it is causing connection string to be change, and at this stage we
+                cannot change the connection string because tenant configuration is unknown.
+            </summary>
+            <param name="dataContext"></param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.GetSearchCriteriaFromHeader(System.String@,System.String@,System.Nullable{System.Int64}@,System.Nullable{System.Int64}@)">
+            <summary>
+                If any search criteria exist, Get it from header
+            </summary>
+            <param name="searchColumn"></param>
+            <param name="searchValue"></param>
+            <param name="customViewID"></param>
+            <param name="entityTypeID"></param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.IsSearchByID">
+            <summary>
+            Check if record is queering for one record or many records.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.DataRepository.Core.Repository`1.GetPaginationCriteriaFromHeader">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Perm.Model.Abstraction
 {
+    [Table(name: "CustomField", Schema = "Config")]
     public class CustomFieldModel : ModelBase
     {
         /// <summary>
@@ -22,9 +23,7 @@ namespace Perm.Model.Abstraction
         /// This field already exist in Config.CustomFieldMeta table, we created this field here too, to avoid the complex join quires.
         /// ApplicationParamMasterID => 7
         /// </summary>
-
         public long ParamEntityTypeID { get; set; }
-
 
         /// <summary>
         /// Placeholder to store string
@@ -32,17 +31,18 @@ namespace Perm.Model.Abstraction
         [StringLength(200)]
         public string StringField1 { get; set; }
 
-
         /// <summary>
         /// Placeholder to store string
         /// </summary>
         [StringLength(200)]
         public string StringField2 { get; set; }
+
         /// <summary>
         /// Placeholder to store string
         /// </summary>
         [StringLength(200)]
         public string StringField3 { get; set; }
+
         /// <summary>
         /// Placeholder to store string
         /// </summary>

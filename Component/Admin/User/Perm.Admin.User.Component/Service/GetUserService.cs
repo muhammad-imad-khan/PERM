@@ -1,8 +1,8 @@
-﻿using Perm.Admin.Model;
-using Perm.Admin.User.Data.Repository;
+﻿using Perm.Admin.User.Data.Repository;
 using Perm.Common.APIModel;
 using Perm.Core.RequestManager.Processor;
 using Perm.DataAccessLayer.DataRepository.Core.Model;
+using Perm.Model.Admin;
 
 namespace Perm.Admin.User.Component.Service;
 

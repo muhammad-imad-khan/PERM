@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
-using Perm.Admin.Model;
 using Perm.DataAccessLayer.Database.SqlServer;
 using Perm.DataAccessLayer.DataRepository.Core;
+using Perm.Model.Admin;
 
 namespace Perm.Admin.User.Data.Repository
 {

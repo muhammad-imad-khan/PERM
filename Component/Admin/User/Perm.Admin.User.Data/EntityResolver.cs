@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Perm.Admin.Model;
-using Perm.DataAccessLayer.Database.SqlServer;
+using Perm.DataAccessLayer.Database.SqlServer.Loader;
+using Perm.Model.Admin;
 using System.ComponentModel.Composition;
 
 namespace Perm.Admin.User.Data

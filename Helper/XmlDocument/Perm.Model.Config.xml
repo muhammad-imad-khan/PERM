@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Model.Config</name>
+    </assembly>
+    <members>
+        <member name="T:Perm.Model.Config.ResponseMessageModel">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Config.ResponseMessageModel.ResponseMessageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Config.ResponseMessageModel.ResponseCode">
+            <summary>
+            Error code identifier
+            </summary>
+        </member>
+        <member name="P:Perm.Model.Config.ResponseMessageModel.ResponseMessage">
+            <summary>
+            User friendly message to be shown on UI
+            </summary>
+        </member>
+    </members>
+</doc>

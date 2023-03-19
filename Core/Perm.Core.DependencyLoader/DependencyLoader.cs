@@ -23,28 +23,26 @@ namespace Perm.Core.DependencyResolver
                     {
                         IEnumerable<Export> exports = compositionContainer.GetExports(importDef);
 
-
-                        IEnumerable<IDependencyResolver> modules = exports.Select(export => export.Value as IDependencyResolver).Where(m => m != null);
-                        //  IEnumerable<IDependencyResolver> modules = exports.Select(export => export.Value as IDependencyResolver).Where(m => m != null);
+                        IEnumerable<IDependencyResolver> components = exports.Select(export => export.Value as IDependencyResolver).Where(m => m != null);
 
                         DependencyRegister registerComponent = new DependencyRegister(serviceCollection);
-                        foreach (IDependencyResolver module in modules)
-                        {
-                            module.SetUp(registerComponent);
-                        }
+
+                        foreach (IDependencyResolver component in components)
+                            component.SetUp(registerComponent);
                     }
                 }
             }
             catch (ReflectionTypeLoadException typeLoadException)
             {
                 StringBuilder builder = new StringBuilder();
+
                 foreach (Exception loaderException in typeLoadException.LoaderExceptions)
-                {
-                    if (loaderException != null) builder.AppendFormat("{0}\n", loaderException.Message);
-                }
+                    if (loaderException != null)
+                        builder.AppendFormat("{0}\n", loaderException.Message);
 
                 throw new TypeLoadException(builder + Environment.NewLine +
-                                            string.Join(Environment.NewLine, typeLoadException.Types.Where(c => c is not null).Select(c => c.Name + "=>" + c.FullName)) + Environment.NewLine
+                                            string.Join(Environment.NewLine,
+                                            typeLoadException.Types.Where(c => c is not null).Select(c => c.Name + "=>" + c.FullName)) + Environment.NewLine
                     , typeLoadException);
             }
         }

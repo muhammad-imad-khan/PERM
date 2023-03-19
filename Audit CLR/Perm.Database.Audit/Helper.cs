@@ -15,21 +15,21 @@ public static class Helper
         return dataRow[columnName].ToString();
     }
 
-    public static string GenerateScript(this List<AuditTrailModel> auditTrails)
+    public static string GenerateScript(this List<AuditModel> auditList)
     {
         string query = "";
 
-        foreach (AuditTrailModel auditTrail in auditTrails)
+        foreach (AuditModel audit in auditList)
         {
-            query = query + Environment.NewLine + "--------------------- COLUMN NAME: " + auditTrail.ColumnName + "-------------------------------" + Environment.NewLine;
+            query = query + Environment.NewLine + "--------------------- COLUMN NAME: " + audit.ColumnName + "-------------------------------" + Environment.NewLine;
 
             query += $"""
-                EXEC Admin.Add_AuditTrail @TableName = N'{auditTrail.TableName}',
-                                          @RecordID = {auditTrail.RecordID},
-                                          @ColumnName = N'{auditTrail.ColumnName}',
-                                          @EventID = {auditTrail.EventID},
-                                          @NewValue = N'{auditTrail.NewValue}',
-                                          @OldValue = N'{auditTrail.OldValue}';
+                EXEC Admin.Add_Audit @TableName = N'{audit.TableName}',
+                                          @RecordID = {audit.RecordID},
+                                          @ColumnName = N'{audit.ColumnName}',
+                                          @EventID = {audit.EventID},
+                                          @NewValue = N'{audit.NewValue}',
+                                          @OldValue = N'{audit.OldValue}';
                 """;
 
             query = query + Environment.NewLine + "-----------------------------------------------------------------------------------";

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Core.ComponentFactoryManager</name>
+    </assembly>
+    <members>
+        <member name="M:Perm.Core.ComponentFactoryManager.IComponentFactory.IsAuthenticate(Perm.Core.RequestManager.Processor.ServiceBase)">
+            <summary>
+            Check if this request is authenticated or not
+            </summary>
+            <param name="serviceBase"></param>
+        </member>
+    </members>
+</doc>

@@ -2,13 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Perm.Admin.Login.Component.APIModel;
 using Perm.Admin.Login.Component.Helper;
-using Perm.Admin.Model;
 using Perm.Admin.User.Data.Repository;
 using Perm.Common;
 using Perm.Common.APIModel;
 using Perm.Config.ApplicationParamDetail.Data.Repository;
 using Perm.Core.ExceptionManager;
 using Perm.Core.RequestManager.Processor;
+using Perm.Model.Admin;
 using Perm.Security.AuthenticateManager;
 
 namespace Perm.Admin.Login.Component.Service;

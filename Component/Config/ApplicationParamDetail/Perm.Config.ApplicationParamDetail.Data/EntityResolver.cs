@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Perm.DataAccessLayer.Database.SqlServer;
+using Perm.DataAccessLayer.Database.SqlServer.Loader;
 using Perm.Model.Abstraction;
 using System.ComponentModel.Composition;
 

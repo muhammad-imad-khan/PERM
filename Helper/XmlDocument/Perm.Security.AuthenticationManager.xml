@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Security.AuthenticationManager</name>
+    </assembly>
+    <members>
+        <member name="M:Perm.Security.AuthenticateManager.AuthenticateHelper.GenerateToken(System.Collections.Generic.Dictionary{System.String,System.String},System.Double)">
+            <summary>
+            Generate the JWT token
+            </summary>
+            <param name="tokenValues">A dictionary object that will add claims to JWT token</param>
+            <param name="timeout">timeout in minutes</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

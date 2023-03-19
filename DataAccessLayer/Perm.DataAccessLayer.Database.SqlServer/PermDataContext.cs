@@ -17,6 +17,8 @@ using Perm.Model.Abstraction;
 using Perm.Core.ExceptionManager;
 using Perm.Core.RequestManager.Processor.PermException;
 using Perm.Model.Setup;
+using Perm.DataAccessLayer.Database.SqlServer.Interceptor;
+using Perm.DataAccessLayer.Database.SqlServer.Loader;
 
 namespace Perm.DataAccessLayer.Database.SqlServer;
 

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Common.APIModel</name>
+    </assembly>
+    <members>
+        <member name="P:Perm.Common.APIModel.RequestModelBase.RequestBodyRaw">
+            <summary>
+            Raw request body from http POST /PUT
+            </summary>
+        </member>
+        <member name="P:Perm.Common.APIModel.ReqCustomFieldModel.StringField">
+            <summary>
+            STRING Field property to hold value of any string column
+            </summary>
+        </member>
+        <member name="P:Perm.Common.APIModel.ReqCustomFieldModel.NumberField">
+            <summary>
+            NUMBER Field property to hold value of any number column
+            </summary>
+        </member>
+        <member name="P:Perm.Common.APIModel.ReqCustomFieldModel.AmountField">
+            <summary>
+            AMOUNT Field property to hold value of any amount column
+            </summary>
+        </member>
+        <member name="P:Perm.Common.APIModel.ReqCustomFieldModel.DateField">
+            <summary>
+            DATE Field property to hold value of any date column
+            </summary>
+        </member>
+        <member name="P:Perm.Common.APIModel.ReqCustomFieldModel.BoolField">
+            <summary>
+            BOOL Field property to hold value of any bool column
+            </summary>
+        </member>
+        <member name="P:Perm.Common.APIModel.ReqCustomFieldModel.ListField">
+            <summary>
+            LIST Field property to hold value of any list column
+            </summary>
+        </member>
+        <member name="P:Perm.Common.APIModel.ResEntityModel.EntityID">
+            <summary>
+            Property to hold and return RecordID in response
+            </summary>
+        </member>
+        <member name="P:Perm.Common.APIModel.ResEntityModel.Value">
+            <summary>
+            Contains the string value
+            </summary>
+        </member>
+    </members>
+</doc>

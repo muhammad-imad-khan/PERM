@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.DataAccessLayer.Database.SqlServer</name>
+    </assembly>
+    <members>
+        <member name="T:Perm.DataAccessLayer.Database.SqlServer.Loader.IEntityResolver">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Perm.DataAccessLayer.Database.SqlServer.Loader.IEntityResolver.SetUp(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="M:Perm.DataAccessLayer.Database.SqlServer.PermDataContext.ScalarFunction``1(System.String,System.Object)">
+            <summary>
+            Execute scalar function on database with given parameters
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="functionName"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Perm.DataAccessLayer.Database.SqlServer.PermDataContext.SqlQuery``1(System.String)">
+            <summary>
+            Execute SQL query on database with given parameters
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

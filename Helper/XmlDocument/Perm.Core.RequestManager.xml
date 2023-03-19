@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.Core.RequestManager</name>
+    </assembly>
+    <members>
+        <member name="M:Perm.Core.RequestManager.RequestHandler.ProcessRequestWithExceptions(System.Func{System.Threading.Tasks.Task{Perm.Common.APIModel.ResponseModel{System.Object}}},System.IServiceProvider,Perm.Core.RequestManager.Processor.ServiceBase)">
+            <summary>
+            Process the request with handled exceptions. We wrapped the action with exceptions, so that we can re-use exception handling for request processor
+            </summary>
+            <param name="action"></param>
+            <param name="provider"></param>
+            <param name="serviceBase"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

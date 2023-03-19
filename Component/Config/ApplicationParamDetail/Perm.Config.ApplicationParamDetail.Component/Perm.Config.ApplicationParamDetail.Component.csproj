@@ -1,14 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.Config.ApplicationParamDetail.Component.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
-    <ProjectReference Include="..\Perm.Config.ApplicationParamDetail.Data\Perm.Config.ApplicationParamDetail.Data.csproj" />
-  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>$(SolutionDir)Bin</OutputPath>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\..\Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
+		<ProjectReference Include="..\Perm.Config.ApplicationParamDetail.Data\Perm.Config.ApplicationParamDetail.Data.csproj" />
+	</ItemGroup>
 
 </Project>

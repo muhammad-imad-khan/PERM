@@ -11,9 +11,9 @@ namespace Perm.Database.Audit
             return DeletedQuery;
         }
 
-        public override List<AuditTrailModel> GetAuditModels(DataSet dataSet)
+        public override List<AuditModel> GetAuditModels(DataSet dataSet)
         {
-            List<AuditTrailModel> auditTails = new List<AuditTrailModel>();
+            List<AuditModel> auditTails = new List<AuditModel>();
             DataRow oldRecord = dataSet.Tables[0].Rows[0];
 
             string primaryKeyColumn = oldRecord.Table.Columns[0].ColumnName;
@@ -26,7 +26,7 @@ namespace Perm.Database.Audit
                 string columnName = newRecordColumn.ColumnName;
                 string oldValue = oldRecord.FormattedValue(columnName);
 
-                auditTails.Add(new AuditTrailModel
+                auditTails.Add(new AuditModel
                 {
                     ChangeOn = DateTime.Now,
                     ColumnName = columnName,
