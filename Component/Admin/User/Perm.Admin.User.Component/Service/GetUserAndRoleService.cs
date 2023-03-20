@@ -1,4 +1,5 @@
-﻿using Perm.Admin.User.Component.APIModel;
+﻿using Perm.Admin.Role.Data.Repository;
+using Perm.Admin.User.Component.APIModel;
 using Perm.Admin.User.Data.Repository;
 using Perm.Common.APIModel;
 using Perm.Core.RequestManager.Processor;
@@ -14,12 +15,12 @@ public class GetUserAndRoleService : ServiceBase
     public override HttpMethod HttpMethod => HttpMethod.Get;
 
     private readonly IUserRepository _userRepository;
-    //private readonly IRoleRepository _roleRepository;
+    private readonly IRoleRepository _roleRepository;
 
-    public GetUserAndRoleService(IUserRepository userRepository)
+    public GetUserAndRoleService(IUserRepository userRepository, IRoleRepository roleRepository)
     {
         _userRepository = userRepository;
-        //_roleRepository = roleRepository;
+        _roleRepository = roleRepository;
     }
 
     protected override Task<ResponseModel<T>> ExecuteComponentAsync<T>(IRequestModel requestModel)
@@ -33,14 +34,14 @@ public class GetUserAndRoleService : ServiceBase
 
         }).ToList();
 
-        //resUserAndRoleModels.AddRange(_roleRepository.GetAll().Select(r => new ResUserAndRoleModel
-        //{
-        //    EntityType = ResUserAndRoleModel.EnumEntityType.ROLE,
-        //    FullName = r.Name,
-        //    Name = r.Name,
-        //    ID = r.RoleID
+        resUserAndRoleModels.AddRange(_roleRepository.GetAll().Select(r => new ResUserAndRoleModel
+        {
+            EntityType = ResUserAndRoleModel.EnumEntityType.ROLE,
+            FullName = r.Name,
+            Name = r.Name,
+            ID = r.RoleID
 
-        //}).ToList());
+        }).ToList());
 
         PaginationList<ResUserAndRoleModel> paginationList = new PaginationList<ResUserAndRoleModel>
         {

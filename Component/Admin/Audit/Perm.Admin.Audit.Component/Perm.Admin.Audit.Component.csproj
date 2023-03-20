@@ -1,28 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
 		<Nullable>disable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
-		<DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.Admin.User.Component.xml</DocumentationFile>
+		<DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.Admin.Audit.Component.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 		<OutputPath>$(SolutionDir)Bin</OutputPath>
-		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<OutputPath>$(SolutionDir)Bin</OutputPath>
-		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\..\Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
-		<ProjectReference Include="..\..\..\..\Security\Perm.Security.AuthenticationManager\Perm.Security.AuthenticationManager.csproj" />
-		<ProjectReference Include="..\..\Role\Perm.Admin.Role.Data\Perm.Admin.Role.Data.csproj" />
-		<ProjectReference Include="..\Perm.Admin.User.Data\Perm.Admin.User.Data.csproj" />
+		<ProjectReference Include="..\Perm.Admin.Audit.Data\Perm.Admin.Audit.Data.csproj" />
 	</ItemGroup>
 
 </Project>
