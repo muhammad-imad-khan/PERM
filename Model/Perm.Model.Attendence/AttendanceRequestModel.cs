@@ -17,7 +17,7 @@ namespace Perm.Model.Attendence
 
         public long AttendanceRequestID { get; set; }
 
-        public long? EmployeeID { get; set; }
+        public long? BusinessPartnerID { get; set; }
 
         public DateTime FromDate { get; set; }
         public DateTime ToDate { get; set; }
