@@ -4,5 +4,15 @@
         <name>Perm.Model.Admin</name>
     </assembly>
     <members>
+        <member name="T:Perm.Model.Admin.PermissionDetailModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Perm.Model.Admin.PermissionModel">
+            <summary>
+            
+            </summary>
+        </member>
     </members>
 </doc>
