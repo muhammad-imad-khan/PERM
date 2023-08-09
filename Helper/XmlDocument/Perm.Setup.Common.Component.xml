@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Perm.KPI.Report.Component</name>
+    </assembly>
+    <members>
+        <member name="T:Perm.KPI.Report.Component.Service.LineChartService">
+            <summary>
+                It represents company performance data grouped by departments
+            </summary>
+        </member>
+    </members>
+</doc>

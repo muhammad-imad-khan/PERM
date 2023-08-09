@@ -231,7 +231,7 @@ public class PermDataContext : DbContext
                 foreach (PropertyInfo propertyInfo in propertyInfos)
                 {
                     if (columnSchema.Any(c => c.ColumnName == propertyInfo.Name))
-                        propertyInfo.SetValue(df, result[propertyInfo.Name]);
+                        propertyInfo.SetValue(df, (result[propertyInfo.Name] == DBNull.Value) ? null : result[propertyInfo.Name]);
 
                 }
 

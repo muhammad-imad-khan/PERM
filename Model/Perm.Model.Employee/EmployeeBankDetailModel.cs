@@ -27,5 +27,7 @@ namespace Perm.Model.EmployeeMasterData
         public string Branch { get; set; }
 
         public string ProvidentFundAccountNumber { get; set; }
+
+        public BusinessPartnerModel BusinessPartner { get; set; }
     }
 }

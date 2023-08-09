@@ -21,6 +21,10 @@
     <ProjectReference Include="..\..\..\DataAccessLayer\Perm.DataAccessLayer.Database.SqlServer\Perm.DataAccessLayer.Database.SqlServer.csproj" />
     <ProjectReference Include="..\..\..\DataAccessLayer\Perm.DataAccessLayer.DataRepository.Core\Perm.DataAccessLayer.DataRepository.Core.csproj" />
     <ProjectReference Include="..\..\..\Model\Perm.Model.Department\Perm.Model.Department.csproj" />
+    <ProjectReference Include="..\..\Attendence\AttendanceRequest\Perm.Attendence.AttendanceRequest.Component\Perm.Attendence.AttendanceRequest.Component.csproj" />
+    <ProjectReference Include="..\..\Attendence\MarlAttendance\Perm.Attendence.MarkAttendance.Component\Perm.Attendence.MarkAttendance.Component.csproj" />
+    <ProjectReference Include="..\..\BusinessPartner\Perm.EmployeeMasterData.BusinessPartner.Component\Perm.EmployeeMasterData.BusinessPartner.Component.csproj" />
+    <ProjectReference Include="..\..\Management\Perm.Management.Task.Component\Perm.Management.Task.Component.csproj" />
   </ItemGroup>
 
 </Project>

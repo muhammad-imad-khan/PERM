@@ -27,5 +27,7 @@ namespace Perm.Model.EmployeeMasterData
         public string State { get; set; }
 
         public string Country { get; set; }
+
+        public BusinessPartnerModel BusinessPartner { get; set; }
     }
 }

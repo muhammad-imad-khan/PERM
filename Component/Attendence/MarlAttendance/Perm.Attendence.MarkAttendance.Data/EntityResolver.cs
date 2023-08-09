@@ -10,7 +10,7 @@ namespace Perm.Attendence.MarkAttendance.Data
     {
         public void SetUp(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity(typeof(MarkAttendanceModel)).Property("MarkAttendanceID").UseHiLo("Seq_Atd","Attendence");
+            modelBuilder.Entity(typeof(MarkAttendanceModel)).Property("MarkAttendanceID").UseHiLo("Seq_MarkAttendance","Attendence");
         }
     }
 }

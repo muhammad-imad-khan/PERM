@@ -1,8 +1,8 @@
 {
   "TenantConfig": [
     {
-      "TenantName": "Microsoft",
-      "TenantID": "Microsoft",
+      "TenantName": "Cerm",
+      "TenantID": "Cerm",
       "TenantDataBaseConfig": {
         "ServerName": "IMADUDDIN\\SQLEXPRESS",
         "DatabaseName": "PERM",
@@ -12,6 +12,20 @@
       "TenantTheme": {
         "LogoImageLocation": "/AppData/Logo/Microsoft.png",
         "ColorCode": "#84E34A"
+      }
+    },
+    {
+      "TenantName": "Plural Dynamics",
+      "TenantID": "Pluraldynamice",
+      "TenantDataBaseConfig": {
+        "ServerName": "IMADUDDIN\\SQLEXPRESS",
+        "DatabaseName": "PERM_Apple",
+        "UserName": "sa",
+        "Password": "sa123"
+      },
+      "TenantTheme": {
+        "LogoImageLocation": "/AppData/Logo/Apple.png",
+        "ColorCode": "#28282B"
       }
     }
   ]

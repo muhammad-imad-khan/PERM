@@ -50,21 +50,10 @@ namespace Perm.EmployeeMasterData.BusinessPartner.Data.Repository
 
         protected override IIncludableQueryable<BusinessPartnerModel, object> IncludeForeignKeys(IQueryable<BusinessPartnerModel> entities)
         {
-            if (IsSearchByID())
-            {
-                entities = entities.Include(s => s.Address);
-                entities = entities.Include(s => s.Contact);
-                entities = entities.Include(s => s.HistoryInCompany);
-                entities = entities.Include(s => s.PersonalDetail);
-                entities = entities.Include(s => s.Level);
-                entities = entities.Include(s => s.LeavingDetail);
-                entities = entities.Include(s => s.HealthInsurance);
-                entities = entities.Include(s => s.BankDetail);
-                entities = entities.Include(s => s.Education);
-                entities = entities.Include(s => s.Shift);
-            }
+            entities = entities.Include(s => s.Department);
+            entities = entities.Include(s => s.ParamGender);
 
-            return base.IncludeForeignKeys(entities);
+            return entities.Include(s => s.ParamLevel);
         }
 
         public async Task AddBusinessPartner(BusinessPartnerModel businessPartnerModel)
@@ -181,7 +170,7 @@ namespace Perm.EmployeeMasterData.BusinessPartner.Data.Repository
                 {
                     if (!businessPartnerModel.BankDetail.Exists(s => s.BusinessPartnerID == dbItem.BusinessPartnerID))
                     {
-                        deleteEmployeeBankDetail.Add(new EmployeeBankDetailModel {  EmployeeBankDetailID= dbItem.EmployeeBankDetailID });
+                        deleteEmployeeBankDetail.Add(new EmployeeBankDetailModel { EmployeeBankDetailID = dbItem.EmployeeBankDetailID });
                     }
                 }
             }
@@ -284,7 +273,7 @@ namespace Perm.EmployeeMasterData.BusinessPartner.Data.Repository
                 {
                     if (!businessPartnerModel.Address.Exists(s => s.BusinessPartnerID == dbItem.BusinessPartnerID))
                     {
-                        deleteEmployeeContact.Add(new EmployeeContactModel { EmployeeContactID = dbItem.EmployeeContactID });
+                        deleteEmployeeContact.Add(new EmployeeContactModel { ContactID = dbItem.ContactID });
                     }
                 }
             }
@@ -295,7 +284,7 @@ namespace Perm.EmployeeMasterData.BusinessPartner.Data.Repository
             {
                 foreach (EmployeeContactModel? reqItem in businessPartnerModel.Contact)
                 {
-                    if (dbEmployeeContact != null && !dbEmployeeContact.Exists(s => s.EmployeeContactID == reqItem.EmployeeContactID))
+                    if (dbEmployeeContact != null && !dbEmployeeContact.Exists(s => s.ContactID == reqItem.ContactID))
                     {
                         await _employeeContactRepository.AddAsync(reqItem);
                     }

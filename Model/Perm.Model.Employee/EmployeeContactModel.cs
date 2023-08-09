@@ -14,7 +14,7 @@ namespace Perm.Model.EmployeeMasterData
     public class EmployeeContactModel : ModelBase
     {
         [Key]
-        public long EmployeeContactID { get; set; }
+        public long ContactID { get; set; }
 
         public long BusinessPartnerID { get; set; }
 
@@ -31,7 +31,8 @@ namespace Perm.Model.EmployeeMasterData
         public string CompanyEmail { get; set; }
 
         [EmailAddress]
-        public string PreferredEmail { get; set; }
+        public string PrefferredEmail { get; set; }
 
+        public BusinessPartnerModel BusinessPartner { get; set; }
     }
 }

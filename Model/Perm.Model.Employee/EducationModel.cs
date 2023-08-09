@@ -23,7 +23,7 @@ namespace Perm.Model.EmployeeMasterData
         public string QualificationProgram { get; set; }
 
         public DateTime YearOfPassing { get; set; }
-    
-        
+
+        public BusinessPartnerModel BusinessPartner { get; set; }
     }
 }

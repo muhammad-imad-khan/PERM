@@ -1,6 +1,5 @@
 ﻿using Perm.Admin.Permission.Component.ApiModel;
 using Perm.Admin.Permission.Data.Repository.Abstraction;
-using Perm.Common;
 using Perm.Common.APIModel;
 using Perm.Core.RequestManager.Processor;
 
@@ -16,12 +15,12 @@ namespace Perm.Admin.Permission.Component.Service
             _permissionRepository = permissionRepository;
         }
 
-        public override HttpMethod HttpMethod => HttpMethod.Get;
+        public override HttpMethod HttpMethod => HttpMethod.Delete;
         public override string URL => "/api/Permission/Delete";
 
         protected async override Task<ResponseModel<T>> ExecuteComponentAsync<T>(IRequestModel requestModel)
         {
-            ReqDeletePermissionModel reqModel = requestModel.MapTo<ReqDeletePermissionModel>();
+            ReqDeletePermissionModel reqModel = CastToObject<ReqDeletePermissionModel>(requestModel);
 
             await _permissionRepository.DeletePermission(reqModel.PermissionID);
 

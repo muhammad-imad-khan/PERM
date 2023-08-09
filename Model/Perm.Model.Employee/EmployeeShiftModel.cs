@@ -18,10 +18,12 @@ namespace Perm.Model.EmployeeMasterData
         public long EmployeeShiftID { get; set; }
 
         public long BusinessPartnerID { get; set; }
+        public long ReportToID { get; set; }
 
         public long ParamShiftID { get; set; }
 
         public string AnnualLeaves { get; set; }
 
+        public BusinessPartnerModel BusinessPartner { get; set; }
     }
 }

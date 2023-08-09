@@ -10,5 +10,6 @@ namespace Perm.EmployeeMasterData.BusinessPartner.Component.APIModel
 {
     public class ReqAddBusinessPartnerModel : BusinessPartnerModel, IRequestModel
     {
+
     }
 }

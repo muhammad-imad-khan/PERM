@@ -12,7 +12,7 @@ namespace Perm.Model.Setup
         public long? ParentMenuID { get; set; }
         public string Name { get; set; }
         public string Link { get; set; }
-        public long ParamEntityTypeID { get; set; }
+        public long? ParamEntityTypeID { get; set; }
         public int SortNo { get; set; }
         public bool IsAdmin { get; set; }
 

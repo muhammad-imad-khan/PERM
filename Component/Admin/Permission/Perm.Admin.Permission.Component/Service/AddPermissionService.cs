@@ -1,6 +1,5 @@
 ﻿using Perm.Admin.Permission.Component.ApiModel;
 using Perm.Admin.Permission.Data.Repository.Abstraction;
-using Perm.Common;
 using Perm.Common.APIModel;
 using Perm.Core.RequestManager.Processor;
 
@@ -16,12 +15,12 @@ namespace Perm.Admin.Permission.Component.Service
             _permissionRepository = permissionRepository;
         }
 
-        public override HttpMethod HttpMethod => HttpMethod.Get;
+        public override HttpMethod HttpMethod => HttpMethod.Post;
         public override string URL => "/api/Permission/Add";
 
         protected async override Task<ResponseModel<T>> ExecuteComponentAsync<T>(IRequestModel requestModel)
         {
-            ReqAddPermissionModel reqModel = requestModel.MapTo<ReqAddPermissionModel>();
+            ReqAddPermissionModel reqModel = CastToObject<ReqAddPermissionModel>(requestModel);
 
             await _permissionRepository.AddPermission(reqModel);
 

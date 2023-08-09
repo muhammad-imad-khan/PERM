@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Perm.Model.Abstraction\Perm.Model.Abstraction.csproj" />
+    <ProjectReference Include="..\Perm.Model.Employee\Perm.Model.Employee.csproj" />
   </ItemGroup>
 
 </Project>

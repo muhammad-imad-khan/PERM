@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>$(SolutionDir)Helper\XmlDocument\Perm.Setup.Common.Component.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>$(SolutionDir)Bin</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>$(SolutionDir)Bin</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Perm.Core.DependencyLoader\Perm.Core.DependencyLoader.csproj" />
+    <ProjectReference Include="..\Perm.Setup.Common.Data\Perm.Setup.Common.Data.csproj" />
+  </ItemGroup>
+
+</Project>

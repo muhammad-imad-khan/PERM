@@ -19,7 +19,9 @@ namespace Perm.Admin.Permission.Data.Repository
 
         protected override IIncludableQueryable<PermissionModel, object> IncludeForeignKeys(IQueryable<PermissionModel> entities)
         {
-            return entities.Include(s => s.PermissionDetail).ThenInclude(s => s.PageOption);
+            return entities.Include(i => i.Role)
+                .Include(i => i.ParamAccessType)
+                .Include(s => s.PermissionDetail).ThenInclude(s => s.PageOption);
         }
 
         public async Task AddPermission(PermissionModel permission)
@@ -28,16 +30,25 @@ namespace Perm.Admin.Permission.Data.Repository
             {
                 foreach (PermissionDetailModel item in permission.PermissionDetail)
                 {
-                    item.PermissionID = 0;
-                    item.PermissionDetailID = 0;
                     item.Permission = null;
                     item.ParamAccessType = null;
                     item.PageOption = null;
+
+                    item.PermissionDetailID = 0;
                 }
 
                 permission.PermissionID = 0;
 
                 await AddAsync(permission);
+
+                foreach (PermissionDetailModel item in permission.PermissionDetail)
+                {
+                    item.PermissionID = permission.PermissionID;
+                    item.CreatedOn = permission.CreatedOn;
+                    item.CreatedBy = permission.CreatedBy;
+                    item.IsDeleted = permission.IsDeleted;
+                }
+
                 await Context.CommitChangesAsync();
             }
         }
@@ -46,6 +57,13 @@ namespace Perm.Admin.Permission.Data.Repository
         {
             if (permission.PermissionDetail != null && permission.PermissionDetail.Count != 0)
             {
+                foreach (PermissionDetailModel item in permission.PermissionDetail)
+                {
+                    item.Permission = null;
+                    item.ParamAccessType = null;
+                    item.PageOption = null;
+                }
+
                 Update(permission);
 
                 await AddDeletePermissionDetail(permission);

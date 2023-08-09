@@ -1,4 +1,5 @@
 ﻿using Perm.Model.Abstraction;
+using Perm.Model.EmployeeMasterData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -17,7 +18,7 @@ namespace Perm.Model.Attendance
 
         public long MarkAttendanceID { get; set; }
 
-        public long? EmployeeID { get; set; }
+        public long? BusinessPartnerID { get; set; }
 
         public long? ParamAttendenceStatusID { get; set; }
 
@@ -26,7 +27,12 @@ namespace Perm.Model.Attendance
         public bool IsLateEntry { get; set; }
 
         public bool IsEarlyExit { get; set; }
+        public bool IsEmergencyExit { get; set; }
 
         public DateTime Date { get; set; }
+
+        public ApplicationParamDetailModel ParamAttendenceStatus { get; set; }
+        public ApplicationParamDetailModel ParamShift { get; set; }
+        public BusinessPartnerModel BusinessPartner { get; set; }
     }
 }

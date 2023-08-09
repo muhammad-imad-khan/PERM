@@ -16,6 +16,6 @@ namespace Perm.Model.Setup
         public bool IsStandard { get; set; }
         public int DisplayOrder { get; set; }
 
-
+        public MenuModel Menu { get; set; }
     }
 }

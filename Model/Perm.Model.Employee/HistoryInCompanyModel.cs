@@ -28,5 +28,6 @@ namespace Perm.Model.EmployeeMasterData
 
         public string Company { get; set; }
 
+        public BusinessPartnerModel BusinessPartner { get; set; }
     }
 }
