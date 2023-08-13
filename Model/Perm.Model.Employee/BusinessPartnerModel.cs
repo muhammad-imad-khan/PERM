@@ -1,5 +1,6 @@
 ﻿using Perm.Model.Abstraction;
 using Perm.Model.Department;
+using Perm.Model.Employee;
 using Perm.Model.EmployeeMasterData;
 using System;
 using System.Collections.Generic;
@@ -53,7 +54,7 @@ namespace Perm.Model.EmployeeMasterData
         public List<EmployeeAddressModel> Address { get; set; }
         public List<EmployeeBankDetailModel> BankDetail { get; set; }
         public List<HistoryInCompanyModel> HistoryInCompany { get; set; }
-        public List<FeedbackRatingModel> FeedbackRatingModel { get; set; }
+        public List<FeedbackModel> FeedbackRatingModel { get; set; }
 
         #endregion
 

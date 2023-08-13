@@ -4,7 +4,7 @@
       "TenantName": "Cerm",
       "TenantID": "Cerm",
       "TenantDataBaseConfig": {
-        "ServerName": "IMADUDDIN\\SQLEXPRESS",
+        "ServerName": "IMADKHAN\\SQLEXPRESS",
         "DatabaseName": "PERM",
         "UserName": "sa",
         "Password": "sa123"
@@ -16,9 +16,9 @@
     },
     {
       "TenantName": "Plural Dynamics",
-      "TenantID": "Pluraldynamice",
+      "TenantID": "Pluraldynamics",
       "TenantDataBaseConfig": {
-        "ServerName": "IMADUDDIN\\SQLEXPRESS",
+        "ServerName": "IMADKHAN\\SQLEXPRESS",
         "DatabaseName": "PERM_Apple",
         "UserName": "sa",
         "Password": "sa123"

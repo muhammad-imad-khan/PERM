@@ -16,6 +16,7 @@ namespace Perm.EmployeeMasterData.BusinessPartner.Component
             dependencyRegister.AddScoped<ServiceBase, UpdateBusinessPartnerService>();
             dependencyRegister.AddScoped<ServiceBase, DeleteBusinessPartnerService>();
             dependencyRegister.AddScoped<ServiceBase, GetBusinessPartnerService>();
+            dependencyRegister.AddScoped<ServiceBase, AddBusinessPartnerFeedback>();
 
             dependencyRegister.AddScoped<IBusinessPartnerRepository, BusinessPartnerRepository>();
             dependencyRegister.AddScoped<IBankDetailRepository, BankDetailRepository>();
@@ -28,9 +29,7 @@ namespace Perm.EmployeeMasterData.BusinessPartner.Component
             dependencyRegister.AddScoped<ILeavingDetailRepository, LeavingDetailRepository>();
             dependencyRegister.AddScoped<ILevelRepository, LevelRepository>();
             dependencyRegister.AddScoped<IPersonalDetailRepository, PersonalDetailRepository>();
-
-
-
+            dependencyRegister.AddScoped<IFeedbackRepository, FeedbackRepository>();
         }
     }
 }

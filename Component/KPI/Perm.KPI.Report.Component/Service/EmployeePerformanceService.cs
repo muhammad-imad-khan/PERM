@@ -65,7 +65,7 @@ namespace Perm.KPI.Report.Component.Service
 
         private int GetTaskPoint(IGrouping<string, View_EmployeePerformanceModel> models)
         {
-            int points = 5;
+            int points = TASK_POINT;
 
             foreach (View_EmployeePerformanceModel item in models.Where(s => s.TargetCompletionDate != null && s.Deadline != null))
             {
@@ -78,7 +78,7 @@ namespace Perm.KPI.Report.Component.Service
 
         private int GetAttendancePoint(IGrouping<string, View_EmployeePerformanceModel> models)
         {
-            int points = 4;
+            int points = ATTENDANCE_POINT;
             int totalAttendance = models.Where(s => s.ParamAttendenceStatusID != null).Count();
             totalAttendance = totalAttendance == 0 ? 1 : totalAttendance;
             int presentRate = (models.Count(c => c.ParamAttendenceStatusID != null && c.ParamAttendenceStatusID == 12) / totalAttendance) * 100; // present status
@@ -108,7 +108,7 @@ namespace Perm.KPI.Report.Component.Service
             int totalRating = models.Where(s => s.RatingMarks != null).Count();
             totalRating = totalRating == 0 ? 1 : totalRating;
             int ratingSum = models.Where(s => s.RatingMarks != null).Sum(s => s.RatingMarks) ?? 0;
-            int overallRating = (ratingSum / totalRating) * 100;
+            int overallRating = (ratingSum / totalRating);
 
             return RATING_POINT * overallRating;
         }

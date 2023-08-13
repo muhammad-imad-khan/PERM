@@ -15,7 +15,12 @@ namespace Perm.Management.Tasks.Data.Repository
 
         protected override IIncludableQueryable<TaskModel, object> IncludeForeignKeys(IQueryable<TaskModel> entities)
         {
-            return entities.Include(i => i.AssignedTo).ThenInclude(i => i.Department);
+            return entities
+                .Include(i => i.ParamTaskType)
+                .Include(i => i.ParamTaskPriority)
+                .Include(i => i.ParamTaskStatus)
+                .Include(i => i.AssignedBy)
+                .Include(i => i.AssignedTo).ThenInclude(i => i.Department);
         }
 
         public async Task AddTask(TaskModel taskModel)
