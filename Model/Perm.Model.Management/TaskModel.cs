@@ -11,6 +11,7 @@ namespace Perm.Model.Management
     {
         [Key]
         public long TaskID { get; set; }
+        public string? Code { get; set; }
 
         public long? ParamTaskTypeID { get; set; }
         public long? ParamTaskPriorityID { get; set; }

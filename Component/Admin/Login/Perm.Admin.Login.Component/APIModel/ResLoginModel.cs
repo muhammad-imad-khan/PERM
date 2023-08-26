@@ -8,5 +8,6 @@ namespace Perm.Admin.Login.Component.APIModel
         public ITenantConfigModel TenantConfig { get; set; }
         public List<ResMenuModel> Menu { get; set; }
         public Dictionary<string, string> GlobalSettingDictionary { get; set; }
+        public List<string> Role { get; set; }
     }
 }

@@ -44,7 +44,7 @@ public class LoginService : ServiceBase
 
         UserModel userModel = _userRepository
             .GetAll()
-            .Include(c => c.UserRole)
+            .Include(c => c.UserRole).ThenInclude(x => x.Role)
             .FirstOrDefault(s => s.LoginID == reqLoginModel.Username.ToUpper());
 
         if (userModel is null)
@@ -78,7 +78,8 @@ public class LoginService : ServiceBase
             {
                 Token = generateToken,
                 TenantConfig = _userRepository.TenantConfigModel,
-                Menu = menuModels
+                Menu = menuModels,
+                Role = userModel.UserRole.Select(s => s.Role.Name).ToList()
             }
         });
     }

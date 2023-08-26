@@ -18,10 +18,7 @@ namespace Perm.Admin.User.Data.Repository
 
         protected override IIncludableQueryable<UserModel, object> IncludeForeignKeys(IQueryable<UserModel> entities)
         {
-            if (IsSearchByID())
-                return entities.Include(s => s.UserRole).ThenInclude(s => s.Role);
-
-            return base.IncludeForeignKeys(entities);
+            return entities.Include(s => s.UserRole).ThenInclude(s => s.Role);
         }
 
         public async Task AddUser(UserModel userModel)
