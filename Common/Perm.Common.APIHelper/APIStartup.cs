@@ -109,6 +109,8 @@ namespace Perm.Common.APIHelper
 
             app.UseResponseCaching();
 
+            app.UseHsts();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();

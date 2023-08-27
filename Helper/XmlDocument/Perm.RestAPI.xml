@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Perm.RestAPI</name>
+        <name>Perm.RestAPI.Secure</name>
     </assembly>
     <members>
         <member name="T:Perm.RestAPI.Program">
@@ -15,24 +15,24 @@
             </summary>
             <param name="args"></param>
         </member>
-        <member name="T:Perm.RestAPI.Startup">
+        <member name="T:Perm.RestAPI.Secure.Startup">
             <summary>
             This class configure Perm API services
             </summary>
         </member>
-        <member name="M:Perm.RestAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+        <member name="M:Perm.RestAPI.Secure.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             This class configure Perm API services
             </summary>
             <param name="configuration"></param>
         </member>
-        <member name="M:Perm.RestAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:Perm.RestAPI.Secure.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             This method gets called by the runtime. Use this method to add services to the container.
             </summary>
             <param name="services"></param>
         </member>
-        <member name="M:Perm.RestAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,System.IServiceProvider,System.Collections.Generic.IEnumerable{Perm.Core.RequestManager.Processor.ServiceBase})">
+        <member name="M:Perm.RestAPI.Secure.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,System.IServiceProvider,System.Collections.Generic.IEnumerable{Perm.Core.RequestManager.Processor.ServiceBase})">
             <summary>
             This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
             </summary>

@@ -216,9 +216,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.Setup.Common.Component
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KPI", "KPI", "{E297EFC6-1575-4FCB-9AB6-CEF5B9BAC5E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.KPI.Report.Component", "Component\KPI\Perm.KPI.Report.Component\Perm.KPI.Report.Component.csproj", "{DA62B8A7-5ED3-40A1-85EC-797603AEF6BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.KPI.Report.Component", "Component\KPI\Perm.KPI.Report.Component\Perm.KPI.Report.Component.csproj", "{DA62B8A7-5ED3-40A1-85EC-797603AEF6BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.KPI.Report.Data", "Component\KPI\Perm.KPI.Report.Data\Perm.KPI.Report.Data.csproj", "{B56C2D92-E93D-4B5A-9324-7C1C09C6B771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perm.KPI.Report.Data", "Component\KPI\Perm.KPI.Report.Data\Perm.KPI.Report.Data.csproj", "{B56C2D92-E93D-4B5A-9324-7C1C09C6B771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perm.RestAPI.Secure", "Perm.RestAPI.Secure\Perm.RestAPI.Secure.csproj", "{9D80F6CE-8606-433A-9C47-1F87BC8A71D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -446,6 +448,10 @@ Global
 		{B56C2D92-E93D-4B5A-9324-7C1C09C6B771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B56C2D92-E93D-4B5A-9324-7C1C09C6B771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B56C2D92-E93D-4B5A-9324-7C1C09C6B771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D80F6CE-8606-433A-9C47-1F87BC8A71D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D80F6CE-8606-433A-9C47-1F87BC8A71D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D80F6CE-8606-433A-9C47-1F87BC8A71D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D80F6CE-8606-433A-9C47-1F87BC8A71D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
