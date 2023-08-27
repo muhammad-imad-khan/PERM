@@ -15,7 +15,7 @@ namespace Perm.Attendence.MarkAttendance.Data.Repository
 
         protected override IIncludableQueryable<MarkAttendanceModel, object> IncludeForeignKeys(IQueryable<MarkAttendanceModel> entities)
         {
-            return entities.Include(i => i.ParamAttendenceStatus);
+            return entities.Include(i => i.ParamAttendenceStatus).Include(i => i.ParamShift).Include(i => i.BusinessPartner);
         }
 
         public async Task AddMarkAttendance(MarkAttendanceModel markAttendanceModel)

@@ -108,9 +108,9 @@ namespace Perm.KPI.Report.Component.Service
             int totalRating = models.Where(s => s.RatingMarks != null).Count();
             totalRating = totalRating == 0 ? 1 : totalRating;
             int ratingSum = models.Where(s => s.RatingMarks != null).Sum(s => s.RatingMarks) ?? 0;
-            int overallRating = (ratingSum / totalRating);
+            double overallRating = (double)(ratingSum / totalRating) / 5;
 
-            return RATING_POINT * overallRating;
+            return (double)(RATING_POINT * overallRating);
         }
     }
 }

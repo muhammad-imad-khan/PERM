@@ -13,6 +13,7 @@ namespace Perm.Model.Department
 
         public string Name { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string Code { get; set; }
     }
 }

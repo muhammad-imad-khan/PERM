@@ -9,5 +9,6 @@ namespace Perm.Admin.Login.Component.APIModel
         public List<ResMenuModel> Menu { get; set; }
         public Dictionary<string, string> GlobalSettingDictionary { get; set; }
         public List<string> Role { get; set; }
+        public long BusinessPartnerID { get; set; }
     }
 }

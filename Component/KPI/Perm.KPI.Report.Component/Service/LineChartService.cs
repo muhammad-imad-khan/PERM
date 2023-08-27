@@ -16,7 +16,7 @@ namespace Perm.KPI.Report.Component.Service
     {
 
 
-        public override string URL => "/api/AttendanceChart";
+        public override string URL => "/api/LineChart";
         public override HttpMethod HttpMethod => HttpMethod.Get;
 
         protected override Task<ResponseModel<T>> ExecuteComponentAsync<T>(IRequestModel requestModel)

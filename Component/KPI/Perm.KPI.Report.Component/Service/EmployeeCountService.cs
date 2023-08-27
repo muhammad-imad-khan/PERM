@@ -22,7 +22,7 @@ namespace Perm.KPI.Report.Component.Service
             _businessPartnerRepository = businessPartnerRepository;
         }
 
-        public override string URL => "/api/AttendanceChart";
+        public override string URL => "/api/EmployeeCount";
         public override HttpMethod HttpMethod => HttpMethod.Get;
 
         protected override async Task<ResponseModel<T>> ExecuteComponentAsync<T>(IRequestModel requestModel)
@@ -38,7 +38,7 @@ namespace Perm.KPI.Report.Component.Service
                     .Select(s => new ResReportModel
                     {
                         Count = s.Count(),
-                        Status = s.FirstOrDefault()?.Department.Name ?? "None"
+                        Status = s.FirstOrDefault()?.Department?.Name ?? "Unknown"
                     })
                     .OrderBy(o => o.Status)
                     .ToList();

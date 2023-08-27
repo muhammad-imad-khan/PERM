@@ -23,23 +23,23 @@ namespace Perm.KPI.Report.Component.Service
             _taskRepository = taskRepository;
         }
 
-        public override string URL => "/api/AttendanceChart";
+        public override string URL => "/api/TaskCount";
         public override HttpMethod HttpMethod => HttpMethod.Get;
 
         protected override async Task<ResponseModel<T>> ExecuteComponentAsync<T>(IRequestModel requestModel)
         {
-            List<TaskModel> attendenceList = await _taskRepository.GetAll().ToListAsync();
+            List<TaskModel> taskList = await _taskRepository.GetAll().ToListAsync();
 
             List<ResReportModel> groupedData = new List<ResReportModel>();
 
-            if (attendenceList.Count != 0)
+            if (taskList.Count != 0)
             {
-                groupedData = attendenceList
-                    .GroupBy(g => g.AssignedToID)
+                groupedData = taskList
+                    .GroupBy(g => g.ParamTaskStatusID)
                     .Select(s => new ResReportModel
                     {
                         Count = s.Count(),
-                        Status = s.FirstOrDefault()?.AssignedTo?.Department?.Name ?? "None"
+                        Status = s.FirstOrDefault()?.ParamTaskStatus?.ParamKey ?? "Unknown"
                     })
                     .OrderBy(o => o.Status)
                     .ToList();

@@ -28,11 +28,12 @@ namespace Perm.KPI.Report.Component.Service
             if (attendenceList.Count != 0)
             {
                 groupedData = attendenceList
+                    .Where(x => x.Date.Date >= DateTime.Now.Date)
                     .GroupBy(g => g.ParamAttendenceStatusID)
                     .Select(s => new ResReportModel
                     {
                         Count = s.Count(),
-                        Status = s.FirstOrDefault()?.ParamAttendenceStatus.ParamKey ?? "None"
+                        Status = s.FirstOrDefault()?.ParamAttendenceStatus?.ParamKey ?? "Unknow"
                     })
                     .OrderBy(o => o.Status)
                     .ToList();

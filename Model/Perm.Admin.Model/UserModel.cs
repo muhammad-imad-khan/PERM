@@ -1,4 +1,5 @@
 ﻿using Perm.Model.Abstraction;
+using Perm.Model.EmployeeMasterData;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -25,7 +26,8 @@ namespace Perm.Model.Admin
         public string Password { get; set; }
         public bool IsAdmin { get; set; }
         public bool IsActive { get; set; }
-
+        public long BusinessPartnerID { get; set; }
         public List<UserRoleModel> UserRole { get; set; }
+        public BusinessPartnerModel BusinessPartner { get; set; }
     }
 }

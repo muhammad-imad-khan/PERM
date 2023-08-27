@@ -79,7 +79,8 @@ public class LoginService : ServiceBase
                 Token = generateToken,
                 TenantConfig = _userRepository.TenantConfigModel,
                 Menu = menuModels,
-                Role = userModel.UserRole.Select(s => s.Role.Name).ToList()
+                Role = userModel.UserRole.Select(s => s.Role.Name).ToList(),
+                BusinessPartnerID = userModel.BusinessPartnerID
             }
         });
     }

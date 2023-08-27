@@ -11,6 +11,8 @@ namespace Perm.Model.Management
     {
         [Key]
         public long TaskID { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string? Code { get; set; }
 
         public long? ParamTaskTypeID { get; set; }

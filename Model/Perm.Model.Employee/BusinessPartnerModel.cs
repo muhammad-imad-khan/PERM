@@ -18,6 +18,7 @@ namespace Perm.Model.EmployeeMasterData
         [Key]
         public long BusinessPartnerID { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string Code { get; set; }
 
         public long DepartmentID { get; set; }
