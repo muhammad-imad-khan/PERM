@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>disable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
@@ -19,7 +19,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EFCoreSecondLevelCacheInterceptor" Version="3.8.0" />
+		<PackageReference Include="EFCoreSecondLevelCacheInterceptor" Version="5.2.1" />
 	</ItemGroup>
 
 	<ItemGroup>

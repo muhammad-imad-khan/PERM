@@ -33,13 +33,13 @@ namespace Perm.Common.APIHelper
 
         public static IServiceCollection PermServiceCollection(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddEFSecondLevelCache(options =>
-            {
-                options.UseMemoryCacheProvider(CacheExpirationMode.Absolute, TimeSpan.FromDays(1))
-                    .DisableLogging()
-                    .UseMemoryCacheProvider()
-                    .CacheAllQueries(CacheExpirationMode.Absolute, TimeSpan.FromDays(1));
-            });
+            //services.AddEFSecondLevelCache(options =>
+            //{
+            //    options.UseMemoryCacheProvider(CacheExpirationMode.Absolute, TimeSpan.FromDays(1))
+            //        .DisableLogging()
+            //        .UseMemoryCacheProvider()
+            //        .CacheAllQueries(CacheExpirationMode.Absolute, TimeSpan.FromDays(1));
+            //});
 
             services.AddScoped<SessionContextInterceptor>();
             services.AddScoped<CommandInterceptor>();
